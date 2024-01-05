@@ -1,0 +1,8 @@
+{
+  "name": "rn-template",
+  "version": "0.0.1",
+  "description": "Opinionated React Native Template",
+  "repository": "https://github.com/Balthazar33/opinionated-rn-template.git",
+  "author": "Balthazar33",
+  "license": "MIT"
+}

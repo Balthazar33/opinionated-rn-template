@@ -36,7 +36,7 @@ npm run android:stage
 This template uses **Redux Toolkit** to handle ephemeral data storage.
 ### Usage
 #### To add an action
-Navigate to `src/appRedux/slces` and create a new slice. Then, export the action from the slice. (*Refer sample slices in the folder*).
+Navigate to `src/appRedux/slices` and create a new slice. Then, export the action from the slice. (*Refer sample slices in the folder*).
 
 #### To dispatch an action:
 ```bash

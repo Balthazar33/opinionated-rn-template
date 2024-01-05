@@ -1,0 +1,39 @@
+version: 2.1
+
+jobs:
+  node:
+    working_directory: ~/rntemplate/template
+    docker:
+      - image: cimg/node:20.10.0
+    steps:
+      - checkout # load source code into circleci directory
+      - restore_cache: # pre-defined step to restore cache, if available
+          key: node-v1-{{ checksum "package.json" }}--{{ arch }}
+      - run:
+          name: Install dependencies
+          command: npm i
+      - save_cache:
+          key: node-v1-{{ checksum "package.json" }}--{{ arch }}
+          paths:
+            - node_modules
+      - run:
+          name: Run App.tsx tests
+          command: npm run test:app
+      - run:
+          name: Run component tests
+          command: npm run test:components
+      - run:
+          name: Run containers tests
+          command: npm run test:containers
+      - persist_to_workspace:
+          root: ~/rntemplate/template
+          paths:
+            - node_modules
+
+workflows:
+  test-build:
+    jobs:
+      - node:
+          filters:
+            branches:
+              only: main

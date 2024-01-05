@@ -6,7 +6,10 @@ jobs:
     docker:
       - image: cimg/node:20.10.0
     steps:
-      - checkout # load source code into circleci directory
+      - checkout # load source code into circleci 
+      - run:
+          name: Checkout template folder
+          command: cd template
       - restore_cache: # pre-defined step to restore cache, if available
           key: node-v1-{{ checksum "package.json" }}--{{ arch }}
       - run:
@@ -18,7 +21,7 @@ jobs:
             - node_modules
       - run:
           name: Run App.tsx tests
-          command: cd template && npm run test:app
+          command: npm run test:app
       - run:
           name: Run component tests
           command: npm run test:components

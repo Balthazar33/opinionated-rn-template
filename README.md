@@ -1,12 +1,55 @@
-# rn-template
-Opinionated RN template
+# Opinionated RN template
 
-### **Global data management**
-This template uses Redux Toolkit to handle ephemeral data storage
+## 1. Getting Started
+Run the following command in a termial to create a new React Native app with this template:
 
-### **Running the app**
-(Android)
-Dev debug mode: npm run android:dev
-Prod debug mode: npm run android:prod
-QA debug mode: npm run android:qa
-Stage debug mode: npm run android:stage
+```bash
+npx react-native init MyApp --template https://github.com/Balthazar33/opinionated-rn-template.git
+```
+
+Install dependencies:
+```bash
+cd MyApp && npm i
+```
+Then, to run the app:
+
+**Android**:\
+Dev debug mode:
+```bash
+npm run android:dev
+```
+Prod debug mode:
+```bash
+npm run android:prod
+```
+QA debug mode:
+```bash
+npm run android:qa
+```
+Stage debug mode:
+```bash
+npm run android:stage
+```
+(*The env files for each environment can be found in the project root*)
+
+## 2. Global data management
+This template uses **Redux Toolkit** to handle ephemeral data storage.
+### Usage
+#### To add an action
+Navigate to `src/appRedux/slces` and create a new slice. Then, export the action from the slice. (*Refer sample slices in the folder*).
+
+#### To dispatch an action:
+```bash
+const dispatch = useAppDispatch();
+dispatch(<action>)
+```
+#### To access a state value:
+```bash
+const {value} = useAppSelector(state => state.sliceName);
+```
+
+## 3. Managing API calls
+**RTK Query** has been configured to make API calls. Navigate to `src/services/testApi` and refer the sample api. A helper method to make API calls with error handling has been added in `src/services/apiCaller.ts` file.
+
+## 4. Persistent storage
+This template uses **MMKVStorage** as a persistent storage (for redux-persist and as a general local db).

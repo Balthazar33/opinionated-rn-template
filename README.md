@@ -53,3 +53,6 @@ const {value} = useAppSelector(state => state.sliceName);
 
 ## 4. Persistent storage
 This template uses **MMKVStorage** as a persistent storage (for redux-persist and as a general local db).
+
+## 5. Typography
+Pre-styled text components (created with **styled-components/native**) can be found in the `src/components/Typography.ts` file. (*Make sure to add custom fonts in `src/utils/constants.ts` file*).

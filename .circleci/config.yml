@@ -2,14 +2,12 @@ version: 2.1
 
 jobs:
   node:
-    working_directory: ~/rntemplate/template
+    working_directory: ~/rntemplate
     docker:
       - image: cimg/node:20.10.0
     steps:
-      - checkout # load source code into circleci 
-      - run:
-          name: Checkout template folder
-          command: cd template
+      - checkout: # load source code into circleci
+          path: /template
       - restore_cache: # pre-defined step to restore cache, if available
           key: node-v1-{{ checksum "package.json" }}--{{ arch }}
       - run:

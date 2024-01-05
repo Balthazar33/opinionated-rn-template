@@ -1,0 +1,19 @@
+export enum StackScreens {
+  DummyScreen = 'DummyScreen',
+  DummyScreenWithScroll = 'DummyScreenWithScroll',
+  ApiCallScreen = 'ApiCallScreen',
+  PokemonDetailScreen = 'PokemonDetailScreen',
+}
+
+export type RootStackParamList = {
+  /**
+   * Add screens in the following format:
+   * <screen name>: <the param(s) it expects>.
+   * Specify 'undefined' if the screen does not expect any params.
+   */
+  DummyScreen: undefined;
+  DummyScreenWithScroll: undefined;
+  ApiCallScreen: undefined;
+  PokemonDetailScreen: {name: string};
+  // add more screens here...
+};

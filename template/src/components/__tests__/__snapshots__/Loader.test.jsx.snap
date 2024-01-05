@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Loader renders correctly 1`] = `
+<View
+  style={
+    [
+      {
+        "bottom": 0,
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+      },
+      {
+        "backgroundColor": "#00000075",
+      },
+    ]
+  }
+>
+  <ActivityIndicator
+    animating={true}
+    color="#ffffff"
+    size="large"
+    style={
+      {
+        "bottom": 0,
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+      }
+    }
+    testID="ActivityIndicator"
+  />
+</View>
+`;

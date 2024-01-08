@@ -4,5 +4,20 @@
   "description": "Opinionated React Native Template",
   "repository": "https://github.com/Balthazar33/opinionated-rn-template.git",
   "author": "Balthazar33",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "commit": "git-cz"
+  },
+  "config": {
+    "commitizen": {
+      "path": "@commitlint/prompt"
+    }
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^18.4.4",
+    "@commitlint/config-conventional": "^18.4.4",
+    "@commitlint/prompt": "^18.4.4",
+    "commitizen": "^4.3.0",
+    "husky": "^8.0.3"
+  }
 }

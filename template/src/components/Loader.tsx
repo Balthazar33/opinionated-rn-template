@@ -14,6 +14,7 @@ export const Loader = ({size, color}: LoaderProps) => {
     overlay: {
       backgroundColor: withOpacity(Colors.BLACK, 75),
     },
+    // test
   });
 
   return (

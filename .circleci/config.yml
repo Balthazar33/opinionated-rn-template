@@ -40,4 +40,4 @@ workflows:
       - node-test:
           filters:
             branches:
-              ignore: main
+              only: main

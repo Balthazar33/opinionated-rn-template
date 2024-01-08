@@ -1,7 +1,7 @@
 version: 2.1
 
 jobs:
-  node:
+  node-test:
     working_directory: ~/rntemplate/template
     docker:
       - image: cimg/node:20.10.0
@@ -26,15 +26,18 @@ jobs:
       - run:
           name: Run containers tests
           command: npm run test:containers
+      - run:
+          name: Lint
+          command: npm run lint
       - persist_to_workspace:
           root: ~/rntemplate/template
           paths:
             - node_modules
 
 workflows:
-  test-build:
+  test-lint:
     jobs:
-      - node:
+      - node-test:
           filters:
             branches:
-              only: main
+              ignore: main

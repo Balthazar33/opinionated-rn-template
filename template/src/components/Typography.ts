@@ -6,7 +6,7 @@ import {Fonts} from '../utils/constants';
 import {Colors} from '../utils/colors';
 
 interface ColorProps {
-  color?: string,
+  color?: string;
 }
 
 // Regular text---------------------------------

@@ -4,7 +4,7 @@ import {View, StyleSheet, Text} from 'react-native';
 import {Strings} from '../utils/strings';
 import {Colors, withOpacity} from '../utils/colors';
 import {sizer} from '../utils/metrics';
-import {TestIds} from '../utils/testIds';
+import {TestIds} from '../utils/test-ids';
 
 export const NoInternet = ({message}: {message?: string}) => {
   return (

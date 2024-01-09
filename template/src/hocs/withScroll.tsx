@@ -6,7 +6,7 @@ import {
   KeyboardAwareScrollViewProps,
 } from 'react-native-keyboard-aware-scroll-view';
 
-import {commonStyles} from '../utils/commonStyles';
+import {commonStyles} from '../utils/common-styles';
 import {BaseScreenProps} from '../containers/BaseScreen';
 
 export interface KeyboardAwareScrollViewCustomProps {

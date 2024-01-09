@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DummyScreen renders correctly 1`] = `
+<RCTSafeAreaView
+  style={
+    {
+      "backgroundColor": "transparent",
+      "flex": 1,
+    }
+  }
+  testID="AppSafeArea"
+>
+  <View
+    style={
+      [
+        {
+          "flex": 1,
+        },
+        {
+          "gap": 32,
+          "padding": 32,
+        },
+      ]
+    }
+    testID="DummyScreen"
+  >
+    <Text>
+      Base Screen
+    </Text>
+    <View
+      accessibilityState={
+        {
+          "disabled": false,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        [
+          false,
+          undefined,
+        ]
+      }
+      testID="DummyScreen:ToApiCallScreenBtn"
+    >
+      <Text>
+        To Api Call Screen
+      </Text>
+    </View>
+  </View>
+</RCTSafeAreaView>
+`;

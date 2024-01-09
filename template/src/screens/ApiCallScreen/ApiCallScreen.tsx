@@ -12,6 +12,7 @@ import {sizer} from '../../utils/metrics';
 import {SCREEN_PADDING} from '../../utils/constants';
 import {Strings} from '../../utils/strings';
 import {PokemonItem} from './PokemonItem';
+import {TestIds} from '../../utils/test-ids';
 
 export const ApiCallScreen = ({navigation}: ApiCallScreenProps) => {
   const dispatch = useAppDispatch();
@@ -26,7 +27,7 @@ export const ApiCallScreen = ({navigation}: ApiCallScreenProps) => {
   };
 
   return (
-    <BaseScreen style={style.screenStyle}>
+    <BaseScreen testID={TestIds.APICALL_SCREEN} style={style.screenStyle}>
       <Text>{Strings.apiCallScreen}</Text>
       <TouchableRipple onPress={handleBtnPress}>
         <Text>{Strings.getAllPokemon}</Text>

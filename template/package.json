@@ -8,6 +8,7 @@
     "lint": "eslint .",
     "start": "react-native start --reset-cache",
     "test:app": "jest --testPathPattern=__tests__/App.test.tsx",
+    "test:screens": "jest --testPathPattern=src/screens/__tests__",
     "test:components": "jest --testPathPattern=src/components/__tests__",
     "test:containers": "jest --testPathPattern=src/containers/__tests__",
     "adb": "adb devices && adb reverse tcp:8081 tcp:8081",

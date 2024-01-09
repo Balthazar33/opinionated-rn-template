@@ -9,6 +9,7 @@ import {sizer} from '../../utils/metrics';
 import {SCREEN_PADDING} from '../../utils/constants';
 import {StackScreens} from '../../navigation/types';
 import {DummyScreenProps} from './DummyScreen.types';
+import {TestIds} from '../../utils/test-ids';
 
 export const DummyScreen = ({navigation}: DummyScreenProps) => {
   const handleBtnPress = useCallback(() => {
@@ -16,9 +17,11 @@ export const DummyScreen = ({navigation}: DummyScreenProps) => {
   }, [navigation]);
 
   return (
-    <BaseScreen style={style.screenStyle}>
+    <BaseScreen testID={TestIds.DUMMYSCREEN} style={style.screenStyle}>
       <Text>{Strings.baseScreen}</Text>
-      <TouchableRipple onPress={handleBtnPress}>
+      <TouchableRipple
+        testID={TestIds.TO_API_SCREEN_BTN}
+        onPress={handleBtnPress}>
         <Text>{Strings.toApiCallScreen}</Text>
       </TouchableRipple>
     </BaseScreen>

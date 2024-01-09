@@ -13,24 +13,21 @@ cd MyApp && npm i
 ```
 Then, to run the app:
 
-**Android**:\
-Dev debug mode:
+**Android**:
 ```bash
+# Run dev debug
 npm run android:dev
-```
-Prod debug mode:
-```bash
+
+# Run prod debug
 npm run android:prod
-```
-QA debug mode:
-```bash
+
+# Run qa debug
 npm run android:qa
-```
-Stage debug mode:
-```bash
+
+# Run stage debug
 npm run android:stage
 ```
-(*The env files for each environment can be found in the project root*)
+(*The .env files for each environment can be found in the project root*)
 
 ## 2. Global data management
 This template uses **Redux Toolkit** to handle ephemeral data storage.
@@ -56,3 +53,23 @@ This template uses **MMKVStorage** as a persistent storage (for redux-persist an
 
 ## 5. Typography
 Pre-styled text components (created with **styled-components/native**) can be found in the `src/components/Typography.ts` file. (*Make sure to add custom fonts in `src/utils/constants.ts` file*).
+
+## 6. Testing
+This template uses **Jest** to run tests.
+Test files (named as `<component-name>.test.ts/tsx`) can be found under the `__tests__` folder.\
+The setup/config for `Jest` can be found in the `jestSetup.js` and `jest.config.js` files in the project root.
+
+Run sample tests with the following commands:
+```bash
+# Run all tests
+npm run test
+
+# Run tests for App.tsx
+npm run test:app
+
+# Run tests for components
+npm run test:components
+
+# Run tests for containers
+npm run test:containers
+```

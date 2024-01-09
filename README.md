@@ -74,4 +74,7 @@ npm run test:components
 
 # Run tests for containers
 npm run test:containers
+
+# Run tests for screens
+npm run test:screens
 ```

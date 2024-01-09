@@ -27,6 +27,9 @@ jobs:
           name: Run containers tests
           command: npm run test:containers
       - run:
+          name: Run screens tests
+          command: npm run test:screens
+      - run:
           name: Lint
           command: npm run lint
       - persist_to_workspace:

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useCallback} from 'react';
 import {FlatList, StyleSheet, Text} from 'react-native';
 
 import {TouchableRipple} from 'react-native-paper';
@@ -12,6 +12,7 @@ import {sizer} from '../../utils/metrics';
 import {SCREEN_PADDING} from '../../utils/constants';
 import {Strings} from '../../utils/strings';
 import {PokemonItem} from './PokemonItem';
+import {TestIds} from '../../utils/test-ids';
 
 export const ApiCallScreen = ({navigation}: ApiCallScreenProps) => {
   const dispatch = useAppDispatch();
@@ -25,19 +26,21 @@ export const ApiCallScreen = ({navigation}: ApiCallScreenProps) => {
     getAllPokemon({apiCall: pokemonApi, params: {}, dispatch});
   };
 
+  const renderItem = useCallback(
+    ({item}: {item: PokemonItemType}) => (
+      <PokemonItem navigation={navigation} {...item} />
+    ),
+    [navigation],
+  );
+
   return (
-    <BaseScreen style={style.screenStyle}>
+    <BaseScreen testID={TestIds.APICALL_SCREEN} style={style.screenStyle}>
       <Text>{Strings.apiCallScreen}</Text>
       <TouchableRipple onPress={handleBtnPress}>
         <Text>{Strings.getAllPokemon}</Text>
       </TouchableRipple>
       {/* List of pokemon */}
-      <FlatList
-        data={all}
-        renderItem={({item}) => (
-          <PokemonItem navigation={navigation} {...item} />
-        )}
-      />
+      <FlatList data={all} renderItem={renderItem} />
     </BaseScreen>
   );
 };

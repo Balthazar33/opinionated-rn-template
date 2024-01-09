@@ -212,6 +212,7 @@ exports[`App renders correctly 1`] = `
                               },
                             ]
                           }
+                          testID="DummyScreen"
                         >
                           <Text>
                             Base Screen
@@ -245,6 +246,7 @@ exports[`App renders correctly 1`] = `
                                 undefined,
                               ]
                             }
+                            testID="DummyScreen:ToApiCallScreenBtn"
                           >
                             <Text>
                               To Api Call Screen

@@ -16,18 +16,21 @@ import {NoInternet} from '../components';
 import {useInternet} from '../hooks';
 
 export interface BaseScreenProps {
+  testID?: string;
   children: React.ReactNode;
   style?: StyleProp<ViewStyle>;
 }
 
-const BaseScreen = ({children, style}: BaseScreenProps) => {
+const BaseScreen = ({children, style, testID}: BaseScreenProps) => {
   const {isNetAvailable} = useInternet();
 
   return (
     <SafeAreaView testID={TestIds.APP_SAFEAREA} style={styles.safeArea}>
       <StatusBar barStyle={'dark-content'} backgroundColor={Colors.WHITE} />
       {!isNetAvailable && <NoInternet />}
-      <View style={[commonStyles.flex1, style]}>{children}</View>
+      <View testID={testID} style={[commonStyles.flex1, style]}>
+        {children}
+      </View>
     </SafeAreaView>
   );
 };

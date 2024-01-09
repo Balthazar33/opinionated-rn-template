@@ -37,7 +37,7 @@ jobs:
 workflows:
   test-lint:
     jobs:
-      - node-test:
-          filters:
-            branches:
-              only: main
+      - node-test
+          # filters:
+          #   branches:
+          #     only: main

@@ -8,9 +8,9 @@ import {
   ViewStyle,
 } from 'react-native';
 
-import {TestIds} from '../utils/testIds';
+import {TestIds} from '../utils/test-ids';
 import {withScroll} from '../hocs/withScroll';
-import {commonStyles} from '../utils/commonStyles';
+import {commonStyles} from '../utils/common-styles';
 import {Colors} from '../utils/colors';
 import {NoInternet} from '../components';
 import {useInternet} from '../hooks';

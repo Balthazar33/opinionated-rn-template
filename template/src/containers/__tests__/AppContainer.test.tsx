@@ -5,7 +5,7 @@ import {render} from '@testing-library/react-native';
 import '@testing-library/react-native/extend-expect';
 
 import {AppContainer} from '../AppContainer';
-import {TestIds} from '../../utils/testIds';
+import {TestIds} from '../../utils/test-ids';
 import * as store from '../../appRedux/store.utils';
 
 describe('AppContainer', () => {

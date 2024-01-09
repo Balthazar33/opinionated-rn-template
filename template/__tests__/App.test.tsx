@@ -13,7 +13,7 @@ import '@testing-library/react-native/extend-expect';
 
 // Note: test renderer must be required after react-native.
 import renderer from 'react-test-renderer';
-import {TestIds} from '../src/utils/testIds';
+import {TestIds} from '../src/utils/test-ids';
 import {Colors} from '../src/utils/colors';
 
 describe('App', () => {

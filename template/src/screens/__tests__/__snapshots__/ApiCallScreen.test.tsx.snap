@@ -62,6 +62,7 @@ exports[`ApiCallScreen renders correctly 1`] = `
       </Text>
     </View>
     <RCTScrollView
+      data={[]}
       getItem={[Function]}
       getItemCount={[Function]}
       keyExtractor={[Function]}

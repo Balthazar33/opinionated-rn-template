@@ -2,7 +2,7 @@
 
 [![Balthazar33](https://circleci.com/gh/Balthazar33/opinionated-rn-template.svg?style=svg)](https://app.circleci.com/pipelines/github/Balthazar33/opinionated-rn-template)
 
-## 1. Getting Started
+## 🏁 Getting Started
 Run the following command in a termial to create a new React Native app with this template:
 
 ```bash
@@ -31,7 +31,7 @@ npm run android:stage
 ```
 (*The .env files for each environment can be found in the project root*)
 
-## 2. Global data management
+## 🗄️ Global data management
 This template uses **Redux Toolkit** to handle ephemeral data storage.
 ### Usage
 #### To add an action
@@ -47,16 +47,16 @@ dispatch(<action>)
 const {value} = useAppSelector(state => state.sliceName);
 ```
 
-## 3. Managing API calls
-**RTK Query** has been configured to make API calls. Navigate to `src/services/testApi` and refer the sample api. A helper method to make API calls with error handling has been added in `src/services/apiCaller.ts` file.
+## 📶 Managing API calls
+**RTK Query** has been configured to make API calls. Navigate to `src/services/testApi` and refer the sample api. A helper method to make API calls with error handling has been added in `src/services/apiCaller.ts` file.  
 
-## 4. Persistent storage
+## 💾 Persistent storage
 This template uses **MMKVStorage** as a persistent storage (for redux-persist and as a general local db).
 
-## 5. Typography
+## 🔤 Typography
 Pre-styled text components (created with **styled-components/native**) can be found in the `src/components/Typography.ts` file. (*Make sure to add custom fonts in `src/utils/constants.ts` file*).
 
-## 6. Testing
+## 🧪 Testing
 This template uses **Jest** to run tests.
 Test files (named as `<component-name>.test.ts/tsx`) can be found under the `__tests__` folder.\
 The setup/config for `Jest` can be found in the `jestSetup.js` and `jest.config.js` files in the project root.

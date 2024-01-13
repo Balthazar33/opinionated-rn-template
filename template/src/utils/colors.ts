@@ -1,11 +1,11 @@
-export const Colors = {
-  WHITE: '#ffffff',
-  BLACK: '#000000',
-  PRIMARY_RED: '#ff0000',
-  PRIMARY_BLUE: '#0000ff',
-  PRIMARY_GREEN: '#00ff00',
-  TRANSPARENT: 'transparent',
-};
+export enum Colors {
+  WHITE = '#ffffff',
+  BLACK = '#000000',
+  PRIMARY_RED = '#ff0000',
+  PRIMARY_BLUE = '#0000ff',
+  PRIMARY_GREEN = '#00ff00',
+  TRANSPARENT = 'transparent',
+}
 
 // Opacity range type implementation----------------------
 // Ref: https://stackoverflow.com/a/70307091/14431966

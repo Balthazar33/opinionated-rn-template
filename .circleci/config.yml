@@ -48,6 +48,7 @@ jobs:
           path: ~/rntemplate
       - attach_workspace:
           at: ~/rntemplate
+      - run: npm i n
       - run: sudo n 20
       - restore_cache:
           key: jars-{{ checksum "build.gradle" }}-{{ checksum  "app/build.gradle" }}

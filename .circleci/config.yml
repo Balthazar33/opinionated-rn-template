@@ -41,6 +41,7 @@ jobs:
     working_directory: ~/rntemplate/template/android
     docker:
       - image: cimg/android:2023.12
+      - image: cimg/node:20.10.0
     # environment:
     #   APP_VERSION: "2.3.8"
     steps:

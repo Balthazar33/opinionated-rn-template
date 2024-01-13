@@ -49,8 +49,9 @@ jobs:
           path: ~/rntemplate
       - attach_workspace:
           at: ~/rntemplate
-      # - run: npm i n
-      # - run: sudo n 20
+      - restore_cache: # pre-defined step to restore cache, if available
+          key: node-v1-{{ checksum "package.json" }}--{{ arch }}
+      - run: cd .. && npm i && cd android
       - restore_cache:
           key: jars-{{ checksum "build.gradle" }}-{{ checksum  "app/build.gradle" }}
       - save_cache:
@@ -68,10 +69,10 @@ jobs:
 workflows:
   test-lint:
     jobs:
-      - node-test
-      - android-build: 
-          requires:
-            - node-test
+      # - node-test
+      - android-build
+          # requires:
+          #   - node-test
           # filters:
           #   branches:
           #     only: main

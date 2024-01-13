@@ -40,7 +40,7 @@ jobs:
   android-build: 
     working_directory: ~/rntemplate/template/android
     docker:
-       - image: circleci/android:api-30-node
+       - image: cimg/android:2023.12
     # environment:
     #   APP_VERSION: "2.3.8"
     steps:

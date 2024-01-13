@@ -24,8 +24,11 @@ exports[`PokemonDetailScreen renders correctly 1`] = `
     }
   >
     <Text>
+      Fetching details for: 
+      ivysaur
+    </Text>
+    <Text>
       Name: 
-      bulbasaur
     </Text>
     <Text>
       Weight: 

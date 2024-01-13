@@ -12,14 +12,14 @@ jest.mock('react-native/Libraries/EventEmitter/NativeEventEmitter');
 // react-native-netinfo
 jest.mock('@react-native-community/netinfo', () => mockRNCNetInfo);
 
-// react-redux
-jest.mock('react-redux', () => {
-  return {
-    ...jest.requireActual('react-redux'),
-    useSelector: jest.fn().mockImplementation(() => ({})),
-    useDispatch: () => jest.fn(),
-  };
-});
+// // react-redux
+// jest.mock('react-redux', () => {
+//   return {
+//     ...jest.requireActual('react-redux'),
+//     useSelector: jest.fn().mockImplementation(() => ({})),
+//     useDispatch: () => jest.fn(),
+//   };
+// });
 
 //redux-persist
 jest.mock('redux-persist', () => {

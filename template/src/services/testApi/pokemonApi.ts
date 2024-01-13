@@ -1,7 +1,7 @@
 import {createApi, fetchBaseQuery} from '@reduxjs/toolkit/query/react';
 import {Endpoints} from './pokemonApi.endpoints';
 import {FetchMethods} from '../constants';
-const BASE_URL = 'https://pokeapi.co/api/v2/';
+export const BASE_URL = 'https://pokeapi.co/api/v2/';
 
 export const pokemonApi = createApi({
   reducerPath: 'pokeApi',

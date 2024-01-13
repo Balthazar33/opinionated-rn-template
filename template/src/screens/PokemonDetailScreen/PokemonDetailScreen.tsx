@@ -28,7 +28,8 @@ export const PokemonDetailScreen = ({route}: PokemonDetailScreenProps) => {
 
   return (
     <BaseScreen style={style.screenStyle}>
-      <Text>Name: {name}</Text>
+      <Text>Fetching details for: {name}</Text>
+      <Text>Name: {currentPokemon?.name}</Text>
       <Text>Weight: {currentPokemon?.weight}</Text>
     </BaseScreen>
   );

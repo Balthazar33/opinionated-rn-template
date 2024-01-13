@@ -37,10 +37,39 @@ jobs:
           paths:
             - node_modules
 
+  android-build: 
+    working_directory: ~/rntemplate/template/android
+    docker:
+      - image: cimg/android:2023.12
+    # environment:
+    #   APP_VERSION: "2.3.8"
+    steps:
+      - checkout:
+          path: ~/rntemplate
+      - attach_workspace:
+          at: ~/rntemplate
+      - run: sudo n 20
+      - restore_cache:
+          key: jars-{{ checksum "build.gradle" }}-{{ checksum  "app/build.gradle" }}
+      - save_cache:
+          paths:
+            - .gradle
+          key: jars-{{ checksum "build.gradle" }}-{{ checksum  "app/build.gradle" }}
+      - run: 
+          name: Change the .gradlew permission
+          command: chmod +x ./gradlew
+      - run:
+          name: Assemble Debug APK
+          command: ./gradlew assembleDebug
+  
+
 workflows:
   test-lint:
     jobs:
       - node-test
+      - android-build: 
+          requires:
+            - node-test
           # filters:
           #   branches:
           #     only: main

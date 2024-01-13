@@ -5,4 +5,5 @@ export enum TestIds {
   TO_API_SCREEN_BTN = 'DummyScreen:ToApiCallScreenBtn',
   DUMMYSCREEN = 'DummyScreen',
   APICALL_SCREEN = 'ApiCallScreen',
+  GET_ALL_POKEMON_BTN = 'ApiCallScreen:GetAllPokemon',
 }

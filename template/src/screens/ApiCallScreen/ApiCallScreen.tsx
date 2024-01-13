@@ -36,7 +36,9 @@ export const ApiCallScreen = ({navigation}: ApiCallScreenProps) => {
   return (
     <BaseScreen testID={TestIds.APICALL_SCREEN} style={style.screenStyle}>
       <Text>{Strings.apiCallScreen}</Text>
-      <TouchableRipple onPress={handleBtnPress}>
+      <TouchableRipple
+        testID={TestIds.GET_ALL_POKEMON_BTN}
+        onPress={handleBtnPress}>
         <Text>{Strings.getAllPokemon}</Text>
       </TouchableRipple>
       {/* List of pokemon */}

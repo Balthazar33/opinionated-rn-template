@@ -12,14 +12,18 @@ jest.mock('react-native/Libraries/EventEmitter/NativeEventEmitter');
 // react-native-netinfo
 jest.mock('@react-native-community/netinfo', () => mockRNCNetInfo);
 
-// // react-redux
-// jest.mock('react-redux', () => {
-//   return {
-//     ...jest.requireActual('react-redux'),
-//     useSelector: jest.fn().mockImplementation(() => ({})),
-//     useDispatch: () => jest.fn(),
-//   };
-// });
+// react-native-bootsplash
+jest.mock('react-native-bootsplash', () => {
+  return {
+    hide: jest.fn().mockResolvedValue(),
+    isVisible: jest.fn().mockResolvedValue(false),
+    useHideAnimation: jest.fn().mockReturnValue({
+      container: {},
+      logo: {source: 0},
+      brand: {source: 0},
+    }),
+  };
+});
 
 //redux-persist
 jest.mock('redux-persist', () => {
@@ -102,6 +106,15 @@ RNNativeModules.PlatformConstants = RNNativeModules.PlatformConstants || {
 };
 
 // Additional mocks for future use
+
+// react-redux
+// jest.mock('react-redux', () => {
+//   return {
+//     ...jest.requireActual('react-redux'),
+//     useSelector: jest.fn().mockImplementation(() => ({})),
+//     useDispatch: () => jest.fn(),
+//   };
+// });
 
 // react-native-blob-util
 // jest.mock('react-native-blob-util', () => {

@@ -80,7 +80,7 @@ jobs:
   
 
 workflows:
-  test-lint:
+  test-lint-build:
     jobs:
       - node-test
       - android-build:

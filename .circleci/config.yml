@@ -51,6 +51,22 @@ jobs:
       - restore_cache: # pre-defined step to restore cache, if available
           key: node-v1-{{ checksum "package.json" }}--{{ arch }}
       - run: cd .. && npm i && cd android
+      # Install Ninja, CMake (Begin)
+      - run:
+          name: Install Ninja
+          command: |
+            sudo apt-get update && sudo apt-get install -y ninja-build
+      - run:
+          name: Install CMake
+          command: |
+            wget https://github.com/Kitware/CMake/releases/download/v3.22.1/cmake-3.22.1-Linux-x86_64.tar.gz
+            tar -xzvf cmake-3.22.1-Linux-x86_64.tar.gz -C $HOME
+            export PATH=$HOME/ninja:$HOME/cmake-3.22.1-Linux-x86_64/bin:$PATH
+      - run:
+          name: Set CMake and Ninja Paths
+          command: |
+            export PATH=$HOME/ninja:$HOME/cmake-3.22.1-Linux-x86_64/bin:$PATH
+      # Install Ninja, CMake (End)
       - restore_cache:
           key: jars-{{ checksum "build.gradle" }}-{{ checksum  "app/build.gradle" }}
       - save_cache:

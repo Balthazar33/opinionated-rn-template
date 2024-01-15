@@ -6,13 +6,14 @@
 Run the following command in a termial to create a new React Native app with this template:
 
 ```bash
-npx react-native init MyApp --template https://github.com/Balthazar33/opinionated-rn-template.git
+npx react-native init <YOUR_APP_NAME> --template https://github.com/Balthazar33/opinionated-rn-template.git
 ```
 
 Install dependencies:
 ```bash
-cd MyApp && npm i
+cd <YOUR_APP_NAME> && npm i
 ```
+⚠️ Continue to the next step only after configuring the splash screen *(see **Splash Screen** section below)*.\
 Then, to run the app:
 
 **Android**:
@@ -49,6 +50,12 @@ const {value} = useAppSelector(state => state.sliceName);
 
 ## 📶 Managing API calls
 **RTK Query** has been configured to make API calls. Navigate to `src/services/testApi` and refer the sample api. A helper method to make API calls with error handling has been added in `src/services/apiCaller.ts` file.  
+
+## 📱 Splash Screen
+`react-native-bootsplash` is used in this template to control the splash screen behavior and appearance. To display a custom icon on the splash screen, save it in the `assets` folder at the project root as `logo.png` and run
+```bash
+npm run load-splash-asset
+```
 
 ## 💾 Persistent storage
 This template uses **MMKVStorage** as a persistent storage (for redux-persist and as a general local db).

@@ -14,21 +14,21 @@ Install dependencies:
 cd <YOUR_APP_NAME> && npm i
 ```
 ⚠️ Continue to the next step only after configuring the splash screen *(see **Splash Screen** section below)*.\
-Then, to run the app:
+Then, run the appropriate command from the following commands to build the app. *(Once built, the app needs to be launched manually by tapping on its icon)*.
 
 **Android**:
 ```bash
 # Run dev debug
-npm run android:dev
+npm run android:dev && npm run start
 
 # Run prod debug
-npm run android:prod
+npm run android:prod && npm run start
 
 # Run qa debug
-npm run android:qa
+npm run android:qa && npm run start
 
 # Run stage debug
-npm run android:stage
+npm run android:stage && npm run start
 ```
 (*The .env files for each environment can be found in the project root*)
 

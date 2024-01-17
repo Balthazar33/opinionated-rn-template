@@ -46,8 +46,6 @@ jobs:
           path: ~/rntemplate
       - attach_workspace:
           at: ~/rntemplate
-      - restore_cache: # pre-defined step to restore cache, if available
-          key: node-v1-{{ checksum "package.json" }}--{{ arch }}
       - run: cd .. && npm i && cd android
       # Install Ninja, CMake (Begin)
       - run:

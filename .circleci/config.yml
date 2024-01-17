@@ -30,8 +30,11 @@ jobs:
           name: Run screens tests
           command: npm run test:screens
       - run:
-          name: Lint
+          name: Run lint checks
           command: npm run lint
+      - run:
+          name: Run TS checks
+          command: npm run ts
       - persist_to_workspace:
           root: ~/rntemplate/template
           paths:

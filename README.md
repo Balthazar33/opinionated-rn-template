@@ -65,7 +65,7 @@ Pre-styled text components (created with **styled-components/native**) can be fo
 
 ## 🧪 Testing
 This template uses **Jest** to run tests.
-Test files (named as `<component-name>.test.ts/tsx`) can be found under the `__tests__` folder.\
+Test files (named as `<component-name>.test.ts/tsx`) can be found under the folders named `__tests__`.\
 The setup/config for `Jest` can be found in the `jestSetup.js` and `jest.config.js` files in the project root.
 
 Run sample tests with the following commands:

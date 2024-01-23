@@ -6,6 +6,7 @@
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "lint": "eslint .",
+    "ts": "tsc --noEmit --skipLibCheck",
     "start": "react-native start --reset-cache",
     "test": "jest",
     "test:app": "jest --testPathPattern=__tests__/App.test.tsx",

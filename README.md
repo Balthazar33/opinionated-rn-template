@@ -85,3 +85,7 @@ npm run test:containers
 # Run tests for screens
 npm run test:screens
 ```
+
+## 🛡️Security
+#### Third-party keyboard detection (android)
+If one or more third-party on-screen keyboards are detected, a warning will be displayed to the user on launching the app for the first time, notifying the user about the third-party keyboard(s). This implementation can be found in the `MainActivity.kt` file at `android/app/src/main/java/com/<MY_APP>/MainActivity.kt`.

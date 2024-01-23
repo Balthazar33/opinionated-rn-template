@@ -28,15 +28,15 @@ class MainActivity : ReactActivity() {
   
   override fun onCreate(savedInstanceState: Bundle?) {
     RNBootSplash.init(this, R.style.BootTheme) // ⬅️ initialize the splash screen
-    /**Check if 3rd-party keyboards are installed */
-    //Check if user the user was already notified about the custom keyboard(s)--------------------------------
+    /** Check if 3rd-party keyboards are installed */
+    // Check if the user has already been notified about the custom keyboard(s)-------------------------------
     val preferences = PreferenceManager.getDefaultSharedPreferences(this)
     val didNotify = preferences.getString("didNotify", "")
     //--------------------------------------------------------------------------------------------------------
     if (didNotify === "") {
         val isUsingCustomKeyboards = customKeyboardCount()
         if (isUsingCustomKeyboards) {
-            //Store whether the user has already been notified about the custom keyboard(s)-------------------
+            // Store whether the user has already been notified about the custom keyboard(s)------------------
             val editor = preferences.edit()
             editor.putString("didNotify", "true")
             editor.apply()

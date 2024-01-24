@@ -27,20 +27,18 @@ class MainActivity : ReactActivity() {
       DefaultReactActivityDelegate(this, mainComponentName, fabricEnabled)
   
   override fun onCreate(savedInstanceState: Bundle?) {
-    RNBootSplash.init(this, R.style.BootTheme) // ⬅️ initialize the splash screen
-    /**Check if 3rd-party keyboards are installed */
-    //Check if user the user was already notified about the custom keyboard(s)--------------------------------
+    RNBootSplash.init(this, R.style.BootTheme) // initialize the splash screen
+    /** Check if 3rd-party keyboards are installed */
+    // Check if the user has already been notified about the custom keyboard(s)-------------------------------
     val preferences = PreferenceManager.getDefaultSharedPreferences(this)
     val didNotify = preferences.getString("didNotify", "")
-    //--------------------------------------------------------------------------------------------------------
+
     if (didNotify === "") {
-        val isUsingCustomKeyboards = customKeyboardCount()
-        if (isUsingCustomKeyboards) {
-            //Store whether the user has already been notified about the custom keyboard(s)-------------------
+        if (didFindCustomKeyboard()) {
+            // Store whether the user has already been notified about the custom keyboard(s)------------------
             val editor = preferences.edit()
             editor.putString("didNotify", "true")
             editor.apply()
-            //------------------------------------------------------------------------------------------------
 
             //Alert user--------------------------------------------------------------------------------------
             val alertDialog = AlertDialog.Builder(this@MainActivity).create()
@@ -52,13 +50,12 @@ class MainActivity : ReactActivity() {
                 AlertDialog.BUTTON_NEUTRAL, "OK"
             ) { dialog, _ -> dialog.dismiss() }
             alertDialog.show()
-            //-------------------------------------------------------------------------------------------------
         }
     }
     super.onCreate(savedInstanceState) // super.onCreate(null) with react-native-screens
   }
 
-  private fun customKeyboardCount(): Boolean {
+  private fun didFindCustomKeyboard(): Boolean {
         val inputMethodManager = getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
         val list = inputMethodManager.enabledInputMethodList
         val n = list.size

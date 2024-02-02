@@ -13,7 +13,7 @@ Install dependencies:
 ```bash
 cd <YOUR_APP_NAME> && npm i
 ```
-⚠️ Continue to the next step only after configuring the splash screen *(see **Splash Screen** section below)*.\
+⚠️ Continue to the next step only after configuring the splash screen *(see [**Splash Screen**](#splash-screen) section below)*.\
 Then, run the appropriate command from the following commands to build the app. *(Once built, the app needs to be launched manually by tapping on its icon)*.
 
 **Android**:

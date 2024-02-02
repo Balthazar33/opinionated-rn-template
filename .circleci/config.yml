@@ -24,7 +24,7 @@ jobs:
             name: Run all tests and save coverage to coverage.json
             command: npm run test -- --collectCoverage --json --outputFile=coverage.json
       - codecov/upload:
-          file: './coverage.json'
+          file: 'coverage.json'
       # - run:
       #     name: Run App.tsx tests
       #     command: npm run test:app

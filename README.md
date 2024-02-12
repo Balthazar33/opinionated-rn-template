@@ -49,19 +49,20 @@ const {value} = useAppSelector(state => state.sliceName);
 ```
 
 ## 📶 Managing API calls
-**RTK Query** has been configured to make API calls. Navigate to `src/services/testApi` and refer the sample api. A helper method to make API calls with error handling has been added in `src/services/apiCaller.ts` file.  
+**RTK Query** has been configured to make API calls. Navigate to `src/services/testApi` and refer the sample api. A helper method to make API calls with error handling has been added in `src/services/apiCaller.ts` file. Learn more about RTK Query [here.](https://redux-toolkit.js.org/rtk-query/overview)
 
 ## 📱 Splash Screen
 `react-native-bootsplash` is used in this template to control the splash screen behavior and appearance. To display a custom icon on the splash screen, replace the `logo.png` image with your custom image in the `assets` folder at the project root and run
 ```bash
 npm run load-splash-asset
 ```
+[Learn more](https://github.com/zoontek/react-native-bootsplash)
 
 ## 💾 Persistent storage
-This template uses **MMKVStorage** as a persistent storage (for redux-persist and as a general local db).
+This template uses [**MMKVStorage**](https://github.com/ammarahm-ed/react-native-mmkv-storage) as a persistent storage (for redux-persist and as a general local db). 
 
 ## 🔤 Typography
-Pre-styled text components (created with **styled-components/native**) can be found in the `src/components/Typography.ts` file. (*Make sure to add custom fonts in `src/utils/constants.ts` file*).
+Pre-styled text components (created with **styled-components/native**) can be found in the `src/components/Typography.ts` file. (*Make sure to add custom fonts in `src/utils/constants.ts` file*). Learn more about styled components [here.](https://styled-components.com/)
 
 ## 🧪 Testing
 This template uses **Jest** to run tests.
@@ -92,4 +93,4 @@ npm run test:screens
 If one or more third-party on-screen keyboards are detected, a warning will be displayed to the user on launching the app for the first time, notifying the user about the third-party keyboard(s). This implementation can be found in the `MainActivity.kt` file at `android/app/src/main/java/com/<MY_APP>/MainActivity.kt`.
 
 ## 💻DX
-- `eslint-plugin-unicorn` for extending ESLint rules. [Read more](https://github.com/sindresorhus/eslint-plugin-unicorn)
+- `eslint-plugin-unicorn` for extending ESLint rules. [Learn more](https://github.com/sindresorhus/eslint-plugin-unicorn)

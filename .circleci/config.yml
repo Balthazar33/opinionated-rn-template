@@ -1,8 +1,5 @@
 version: 2.1
 
-orbs: 
-  codecov: codecov/codecov@3.2.4
-
 jobs:
   node-test:
     working_directory: ~/rntemplate/template
@@ -20,23 +17,6 @@ jobs:
           key: node-v1-{{ checksum "package.json" }}--{{ arch }}
           paths:
             - node_modules
-      - run:
-            name: Run all tests and save coverage to coverage.json
-            command: npm run test -- --collectCoverage --json --outputFile=coverage.json
-      - codecov/upload:
-          file: './coverage.json'
-      # - run:
-      #     name: Run App.tsx tests
-      #     command: npm run test:app
-      # - run:
-      #     name: Run component tests
-      #     command: npm run test:components
-      # - run:
-      #     name: Run containers tests
-      #     command: npm run test:containers
-      # - run:
-      #     name: Run screens tests
-      #     command: npm run test:screens
       - run:
           name: Run lint checks
           command: npm run lint

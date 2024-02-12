@@ -89,8 +89,13 @@ npm run test:screens
 ```
 
 ## 🛡️Security
-#### Third-party keyboard detection (android)
+- **Third-party keyboard detection (android)**
 If one or more third-party on-screen keyboards are detected, a warning will be displayed to the user on launching the app for the first time, notifying the user about the third-party keyboard(s). This implementation can be found in the `MainActivity.kt` file at `android/app/src/main/java/com/<MY_APP>/MainActivity.kt`.
+- **Encrypted storage**
+Store sensitive data in encrypted storage using **react-native-mmkv-storage**. An encrypted instance of storage can be created as follows:
+```bash
+const encryptedStorage = new MMKVLoader().withEncryption().initialize()
+```
 
 ## 💻DX
 - `eslint-plugin-unicorn` for extending ESLint rules. [Learn more](https://github.com/sindresorhus/eslint-plugin-unicorn)

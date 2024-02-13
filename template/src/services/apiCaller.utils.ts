@@ -16,7 +16,7 @@ export const GENERIC_ERROR = {
   errorMessage: Strings.genericError,
 };
 
-export const NO_INTERNT_ERROR = {
+export const NO_INTERNET_ERROR = {
   isSuccess: false,
   data: null,
   errorMessage: Strings.noInternet,

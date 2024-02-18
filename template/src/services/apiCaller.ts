@@ -1,21 +1,25 @@
 import NetInfo from '@react-native-community/netinfo';
 
 import {
-  ApiCallWithErrorHandling,
   ApiError,
-  CommonResponse,
   ErrorType,
   ServerError,
   StatusCodes,
+  CommonResponse,
+  ApiCallWithErrorHandling,
 } from './types';
 import {Strings} from '../utils/strings';
 import {store} from '../appRedux/store.utils';
 import {resetAll} from '../appRedux/appActions';
-import {GENERIC_ERROR, NO_INTERNT_ERROR, isSuccessful} from './apiCaller.utils';
+import {
+  isSuccessful,
+  GENERIC_ERROR,
+  NO_INTERNET_ERROR,
+} from './apiCaller.utils';
 
 export async function callApi({
-  apiCall,
   params,
+  apiCall,
   dispatch,
 }: ApiCallWithErrorHandling) {
   return NetInfo.fetch().then(async (state: any) => {
@@ -47,16 +51,16 @@ export async function callApi({
         });
       return response;
     }
-    return NO_INTERNT_ERROR;
+    return NO_INTERNET_ERROR;
   });
 }
 
 export async function handleServerError({
+  error,
+  params,
   apiCall,
   dispatch,
-  params,
   errorCode,
-  error,
 }: ServerError) {
   if (errorCode) {
     const ErrorCodeTitle: Record<ErrorType, string> = {
@@ -74,11 +78,8 @@ export async function handleServerError({
       callApi({apiCall, params, dispatch});
     }
 
-    // log out user if status code is 401 or 500
-    if (
-      errorCode === StatusCodes.ERROR401 ||
-      errorCode === StatusCodes.ERROR500
-    ) {
+    // log out user if status code is 401
+    if (errorCode === StatusCodes.ERROR401) {
       try {
         // clear credentials or reset store
         store.dispatch(resetAll());

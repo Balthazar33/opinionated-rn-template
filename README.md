@@ -68,7 +68,7 @@ Pre-styled text components (created with **styled-components/native**) can be fo
 This template uses **Jest** to run tests.
 Test files (named as `<component-name>.test.ts/tsx`) can be found under the folders named `__tests__`.\
 The setup/config for `Jest` can be found in the `jestSetup.js` and `jest.config.js` files in the project root.
-Mock service worker (MSW) has been configured to mock http request responses. [Learn more](https://mswjs.io/)
+**Mock service worker** (MSW) has been configured to mock http request responses. [Learn more](https://mswjs.io/)
 
 Run sample tests with the following commands:
 ```bash
@@ -89,8 +89,14 @@ npm run test:screens
 ```
 
 ## 🛡️Security
-#### Third-party keyboard detection (android)
+- **Third-party keyboard detection (android)**
 If one or more third-party on-screen keyboards are detected, a warning will be displayed to the user on launching the app for the first time, notifying the user about the third-party keyboard(s). This implementation can be found in the `MainActivity.kt` file at `android/app/src/main/java/com/<MY_APP>/MainActivity.kt`.
+- **Encrypted storage**
+Store sensitive data in encrypted storage using **react-native-mmkv-storage**. An encrypted instance of storage can be created as follows:
+```bash
+const encryptedStorage = new MMKVLoader().withEncryption().initialize()
+```
 
 ## 💻DX
 - `eslint-plugin-unicorn` for extending ESLint rules. [Learn more](https://github.com/sindresorhus/eslint-plugin-unicorn)
+- `@commitlint/config-conventional` for enforcing commit message rules and enhancing dx. [Learn more](https://commitlint.js.org/#/reference-rules)

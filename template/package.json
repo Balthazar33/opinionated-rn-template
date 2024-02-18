@@ -9,6 +9,7 @@
     "ts": "tsc --noEmit --skipLibCheck",
     "start": "react-native start --reset-cache",
     "test": "jest",
+    "commit": "commit",
     "test:app": "jest --testPathPattern=__tests__/App.test.tsx",
     "test:screens": "jest --testPathPattern=src/screens/__tests__",
     "test:components": "jest --testPathPattern=src/components/__tests__",
@@ -47,6 +48,8 @@
     "styled-components": "^6.1.1"
   },
   "devDependencies": {
+    "@commitlint/config-conventional": "^18.6.2",
+    "conventional-changelog-atom": "^4.0.0",
     "@babel/core": "^7.20.0",
     "@babel/preset-env": "^7.20.0",
     "@babel/runtime": "^7.20.0",

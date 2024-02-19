@@ -98,5 +98,13 @@ const encryptedStorage = new MMKVLoader().withEncryption().initialize()
 ```
 
 ## 💻DX
-- `eslint-plugin-unicorn` for extending ESLint rules. [Learn more](https://github.com/sindresorhus/eslint-plugin-unicorn)
-- `@commitlint/config-conventional` for enforcing commit message rules and enhancing dx. [Learn more](https://commitlint.js.org/#/reference-rules)
+- `eslint-plugin-unicorn` 
+Integrated for extending ESLint rules. [Learn more](https://github.com/sindresorhus/eslint-plugin-unicorn)
+- `@commitlint/config-conventional`
+Integrated for enforcing commit message rules and enhancing dx.
+Usage:
+```bash
+git add . // Stage changes
+npm run commit // Run commit script
+```
+ [Learn more](https://commitlint.js.org/#/reference-rules)

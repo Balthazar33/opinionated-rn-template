@@ -22,12 +22,12 @@
     "android:stage": "cd android && gradlew clean && cd .. && npx react-native run-android --active-arch-only --mode stagedebug"
   },
   "dependencies": {
-    "@react-native-community/netinfo": "^11.2.1",
+    "@react-native-community/netinfo": "^11.3.1",
     "@react-native-masked-view/masked-view": "^0.2.8",
     "@react-navigation/bottom-tabs": "6.4.0",
-    "@react-navigation/native": "^6.0.13",
-    "@react-navigation/native-stack": "^6.9.17",
-    "@react-navigation/stack": "^6.3.2",
+    "@react-navigation/native": "^6.1.12",
+    "@react-navigation/native-stack": "^6.9.20",
+    "@react-navigation/stack": "^6.3.23",
     "@reduxjs/toolkit": "^1.9.7",
     "@testing-library/react-native": "^12.4.1",
     "@types/jest": "^29.5.10",

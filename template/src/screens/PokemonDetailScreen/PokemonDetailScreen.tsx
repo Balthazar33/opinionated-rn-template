@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react';
-import {StyleSheet, Text} from 'react-native';
+import {StyleSheet} from 'react-native';
 
 import BaseScreen from '../../containers/BaseScreen';
 import {sizer} from '../../utils/metrics';
@@ -9,6 +9,7 @@ import {useAppDispatch, useAppSelector} from '../../appRedux/store.utils';
 import {getDetails} from './PokemonDetailScreen.utils';
 import {clearCurrent} from '../../appRedux/slices/pokemonSlice';
 import {PokemonDetailScreenProps} from './PokemonDetailScreen.types';
+import {TextRegular10, TextRegular12} from '../../components/Typography';
 
 export const PokemonDetailScreen = ({route}: PokemonDetailScreenProps) => {
   const {name} = route?.params || {};
@@ -28,9 +29,9 @@ export const PokemonDetailScreen = ({route}: PokemonDetailScreenProps) => {
 
   return (
     <BaseScreen style={style.screenStyle}>
-      <Text>Fetching details for: {name}</Text>
-      <Text>Name: {currentPokemon?.name}</Text>
-      <Text>Weight: {currentPokemon?.weight}</Text>
+      <TextRegular10>Fetching details for: {name}</TextRegular10>
+      <TextRegular12>Name: {currentPokemon?.name}</TextRegular12>
+      <TextRegular12>Weight: {currentPokemon?.weight}</TextRegular12>
     </BaseScreen>
   );
 };

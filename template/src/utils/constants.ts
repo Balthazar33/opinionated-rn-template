@@ -6,7 +6,7 @@ export const SPLASH_HIDE_DURATION = 3000; // The duration for which the splash s
 
 // TODO: Add custom fonts
 export enum Fonts {
-  BOLD = '',
-  MEDIUM = '',
-  REGULAR = '',
+  BOLD = 'roboto',
+  MEDIUM = 'roboto',
+  REGULAR = 'roboto',
 }

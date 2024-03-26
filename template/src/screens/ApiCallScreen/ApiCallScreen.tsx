@@ -1,5 +1,5 @@
 import React, {useCallback} from 'react';
-import {FlatList, StyleSheet, Text} from 'react-native';
+import {FlatList, StyleSheet} from 'react-native';
 
 import {TouchableRipple} from 'react-native-paper';
 
@@ -13,6 +13,7 @@ import {SCREEN_PADDING} from '../../utils/constants';
 import {Strings} from '../../utils/strings';
 import {PokemonItem} from './PokemonItem';
 import {TestIds} from '../../utils/test-ids';
+import {TextBold12, TextRegular12} from '../../components/Typography';
 
 export const ApiCallScreen = ({navigation}: ApiCallScreenProps) => {
   const dispatch = useAppDispatch();
@@ -35,11 +36,12 @@ export const ApiCallScreen = ({navigation}: ApiCallScreenProps) => {
 
   return (
     <BaseScreen testID={TestIds.APICALL_SCREEN} style={style.screenStyle}>
-      <Text>{Strings.apiCallScreen}</Text>
+      <TextRegular12>{Strings.apiCallScreen}</TextRegular12>
       <TouchableRipple
-        testID={TestIds.GET_ALL_POKEMON_BTN}
-        onPress={handleBtnPress}>
-        <Text>{Strings.getAllPokemon}</Text>
+        onPress={handleBtnPress}
+        style={style.buttonStyle}
+        testID={TestIds.GET_ALL_POKEMON_BTN}>
+        <TextBold12>{Strings.getAllPokemon}</TextBold12>
       </TouchableRipple>
       {/* List of pokemon */}
       <FlatList data={all} renderItem={renderItem} />
@@ -51,5 +53,8 @@ const style = StyleSheet.create({
   screenStyle: {
     gap: sizer(16),
     padding: SCREEN_PADDING,
+  },
+  buttonStyle: {
+    padding: sizer(16),
   },
 });

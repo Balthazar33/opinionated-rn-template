@@ -14,4 +14,8 @@ export const Strings = {
   toApiCallScreen: 'To Api Call Screen',
   apiCallScreen: 'Api Call Screen',
   getAllPokemon: 'Get All Pokemon',
+
+  throwError: 'Throw Error',
+  whoops: 'Whoops!',
+  tryAgain: 'Try Again',
 };

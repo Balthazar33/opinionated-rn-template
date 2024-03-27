@@ -1,10 +1,11 @@
 import React from 'react';
-import {StyleSheet, Text} from 'react-native';
+import {StyleSheet} from 'react-native';
 
 import {TouchableRipple} from 'react-native-paper';
 import {sizer} from '../../utils/metrics';
 import {ApiCallScreenProps} from './ApiCallScreen.types';
 import {StackScreens} from '../../navigation/types';
+import {TextRegular14} from '../../components/Typography';
 
 interface PokemonItemProps {
   name: string;
@@ -17,7 +18,7 @@ export const PokemonItem = ({name, navigation}: PokemonItemProps) => {
 
   return (
     <TouchableRipple style={style.wrapper} onPress={handleNamePress}>
-      <Text>{name}</Text>
+      <TextRegular14>{name}</TextRegular14>
     </TouchableRipple>
   );
 };

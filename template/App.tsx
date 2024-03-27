@@ -10,12 +10,14 @@ import {ActivityIndicator, StyleSheet} from 'react-native';
 
 import {Provider} from 'react-redux';
 import SplashScreen from 'react-native-bootsplash';
+import ErrorBoundary from 'react-native-error-boundary';
 import {PersistGate} from 'redux-persist/integration/react';
 
 import {Colors} from './src/utils/colors';
 import {AppContainer} from './src/containers/AppContainer';
 import {SPLASH_HIDE_DURATION} from './src/utils/constants';
 import {persistor, store} from './src/appRedux/store.utils';
+import {ErrorFallback} from './src/components/ErrorFallback';
 
 function App(): React.JSX.Element {
   useEffect(() => {
@@ -36,7 +38,9 @@ function App(): React.JSX.Element {
           />
         }
         persistor={persistor}>
-        <AppContainer />
+        <ErrorBoundary FallbackComponent={ErrorFallback}>
+          <AppContainer />
+        </ErrorBoundary>
       </PersistGate>
     </Provider>
   );

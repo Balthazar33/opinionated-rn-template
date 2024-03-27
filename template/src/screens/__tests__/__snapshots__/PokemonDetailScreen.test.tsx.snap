@@ -23,14 +23,38 @@ exports[`PokemonDetailScreen renders correctly 1`] = `
       ]
     }
   >
-    <Text>
+    <Text
+      style={
+        {
+          "color": "#000000",
+          "fontFamily": "roboto",
+          "fontSize": 20,
+        }
+      }
+    >
       Fetching details for: 
       ivysaur
     </Text>
-    <Text>
+    <Text
+      style={
+        {
+          "color": "#000000",
+          "fontFamily": "roboto",
+          "fontSize": 24,
+        }
+      }
+    >
       Name: 
     </Text>
-    <Text>
+    <Text
+      style={
+        {
+          "color": "#000000",
+          "fontFamily": "roboto",
+          "fontSize": 24,
+        }
+      }
+    >
       Weight: 
     </Text>
   </View>

@@ -21,6 +21,9 @@ jobs:
           name: Run lint checks
           command: npm run lint
       - run:
+          name: Run Jest tests
+          command: npm run test
+      - run:
           name: Run TS checks
           command: npm run ts
       - persist_to_workspace:

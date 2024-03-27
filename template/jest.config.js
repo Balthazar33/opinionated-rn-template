@@ -1,7 +1,10 @@
 module.exports = {
   preset: 'react-native',
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'svg'],
-  setupFiles: ['<rootDir>/jestSetup.js'],
+  setupFiles: [
+    '<rootDir>/jestSetup.js',
+    './node_modules/react-native-gesture-handler/jestSetup.js',
+  ],
   setupFilesAfterEnv: ['@testing-library/react-native/extend-expect'],
   testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.(js|ts)x?$',
   transform: {
@@ -47,6 +50,7 @@ module.exports = {
       '|react-native-linear-gradient' +
       '|@react-native-async-storage/async-storage' +
       '|@react-native-community/netinfo' +
+      '|react-native-error-boundary' +
       '|react-native-keyboard-aware-scroll-view' +
       '|react-native-mmkv-storage' +
       ')/)',

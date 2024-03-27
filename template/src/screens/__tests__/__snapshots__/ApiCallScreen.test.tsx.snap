@@ -24,13 +24,25 @@ exports[`ApiCallScreen renders correctly 1`] = `
     }
     testID="ApiCallScreen"
   >
-    <Text>
+    <Text
+      style={
+        {
+          "color": "#000000",
+          "fontFamily": "roboto",
+          "fontSize": 24,
+        }
+      }
+    >
       Api Call Screen
     </Text>
     <View
       accessibilityState={
         {
+          "busy": undefined,
+          "checked": undefined,
           "disabled": false,
+          "expanded": undefined,
+          "selected": undefined,
         }
       }
       accessibilityValue={
@@ -42,8 +54,11 @@ exports[`ApiCallScreen renders correctly 1`] = `
         }
       }
       accessible={true}
+      collapsable={false}
       focusable={true}
+      onBlur={[Function]}
       onClick={[Function]}
+      onFocus={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -53,12 +68,22 @@ exports[`ApiCallScreen renders correctly 1`] = `
       style={
         [
           false,
-          undefined,
+          {
+            "padding": 32,
+          },
         ]
       }
       testID="ApiCallScreen:GetAllPokemon"
     >
-      <Text>
+      <Text
+        style={
+          {
+            "color": "#000000",
+            "fontFamily": "roboto",
+            "fontSize": 24,
+          }
+        }
+      >
         Get All Pokemon
       </Text>
     </View>

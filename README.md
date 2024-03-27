@@ -2,7 +2,7 @@
 
 [![Balthazar33](https://circleci.com/gh/Balthazar33/opinionated-rn-template.svg?style=svg)](https://app.circleci.com/pipelines/github/Balthazar33/opinionated-rn-template)
 
-## 🏁 Getting Started
+## 🏁 Getting started
 Run the following command in a termial to create a new React Native app with this template:
 
 ```bash
@@ -88,6 +88,11 @@ npm run test:containers
 npm run test:screens
 ```
 
+## 🐛Error boundary
+This template has an error boundary configured to catch JavaScript run-time errors and display a fallback UI to minimize app crashes.\
+Package used: [`react-native-error-boundary`](https://www.npmjs.com/package/react-native-error-boundary)\
+Learn more about error boundaries [here](https://react.dev/reference/react/Component#catching-rendering-errors-with-an-error-boundary).
+
 ## 🛡️Security
 - **Third-party keyboard detection (android)**
 If one or more third-party on-screen keyboards are detected, a warning will be displayed to the user on launching the app for the first time, notifying the user about the third-party keyboard(s). This implementation can be found in the `MainActivity.kt` file at `android/app/src/main/java/com/<MY_APP>/MainActivity.kt`.
@@ -96,7 +101,6 @@ Store sensitive data in encrypted storage using **react-native-mmkv-storage**. A
 ```bash
 const encryptedStorage = new MMKVLoader().withEncryption().initialize()
 ```
-
 ## 💻DX
 - `eslint-plugin-unicorn` 
 Integrated for extending ESLint rules. [Learn more](https://github.com/sindresorhus/eslint-plugin-unicorn)

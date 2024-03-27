@@ -14,10 +14,10 @@ import ErrorBoundary from 'react-native-error-boundary';
 import {PersistGate} from 'redux-persist/integration/react';
 
 import {Colors} from './src/utils/colors';
+import {ErrorFallback} from './src/components';
 import {AppContainer} from './src/containers/AppContainer';
 import {SPLASH_HIDE_DURATION} from './src/utils/constants';
 import {persistor, store} from './src/appRedux/store.utils';
-import {ErrorFallback} from './src/components/ErrorFallback';
 
 function App(): React.JSX.Element {
   useEffect(() => {

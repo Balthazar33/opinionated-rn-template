@@ -18,9 +18,9 @@
     "android-tasks": "cd android && gradlew tasks",
     "load-splash-asset": "npx react-native generate-bootsplash ./assets/logo.png --background=FFFFFF --logo-width=200 --assets-output=./assets",
     "android:dev": "cd android && gradlew clean && gradlew installDevelopmentDebug",
-    "android:prod": "cd android && gradlew clean && cd .. && npx react-native run-android --active-arch-only --mode productiondebug",
-    "android:qa": "cd android && gradlew clean && cd .. && npx react-native run-android --active-arch-only --mode qadebug",
-    "android:stage": "cd android && gradlew clean && cd .. && npx react-native run-android --active-arch-only --mode stagedebug"
+    "android:stage": "cd android && gradlew clean && gradlew installStageDebug",
+    "android:prod": "cd android && gradlew clean && gradlew installProductionDebug",
+    "android:qa": "cd android && gradlew clean && gradlew installQaDebug"
   },
   "dependencies": {
     "@react-native-community/netinfo": "^11.3.1",

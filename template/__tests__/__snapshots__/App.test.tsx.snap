@@ -38,7 +38,7 @@ exports[`App renders correctly 1`] = `
           }
         }
       >
-        <RNSScreen
+        <RNSModalScreen
           activityState={2}
           collapsable={false}
           gestureResponseDistance={
@@ -77,6 +77,7 @@ exports[`App renders correctly 1`] = `
           <View
             accessibilityElementsHidden={false}
             closing={false}
+            collapsable={false}
             gestureVelocityImpact={0.3}
             importantForAccessibility="auto"
             onClose={[Function]}
@@ -214,13 +215,26 @@ exports[`App renders correctly 1`] = `
                           }
                           testID="DummyScreen"
                         >
-                          <Text>
+                          <Text
+                            style={
+                              {
+                                "color": "#000000",
+                                "fontFamily": "roboto",
+                                "fontSize": 24,
+                              }
+                            }
+                          >
+                             
                             Base Screen
                           </Text>
                           <View
                             accessibilityState={
                               {
+                                "busy": undefined,
+                                "checked": undefined,
                                 "disabled": false,
+                                "expanded": undefined,
+                                "selected": undefined,
                               }
                             }
                             accessibilityValue={
@@ -232,8 +246,11 @@ exports[`App renders correctly 1`] = `
                               }
                             }
                             accessible={true}
+                            collapsable={false}
                             focusable={true}
+                            onBlur={[Function]}
                             onClick={[Function]}
+                            onFocus={[Function]}
                             onResponderGrant={[Function]}
                             onResponderMove={[Function]}
                             onResponderRelease={[Function]}
@@ -243,13 +260,74 @@ exports[`App renders correctly 1`] = `
                             style={
                               [
                                 false,
-                                undefined,
+                                {
+                                  "padding": 32,
+                                },
                               ]
                             }
                             testID="DummyScreen:ToApiCallScreenBtn"
                           >
-                            <Text>
+                            <Text
+                              style={
+                                {
+                                  "color": "#000000",
+                                  "fontFamily": "roboto",
+                                  "fontSize": 28,
+                                }
+                              }
+                            >
                               To Api Call Screen
+                            </Text>
+                          </View>
+                          <View
+                            accessibilityState={
+                              {
+                                "busy": undefined,
+                                "checked": undefined,
+                                "disabled": false,
+                                "expanded": undefined,
+                                "selected": undefined,
+                              }
+                            }
+                            accessibilityValue={
+                              {
+                                "max": undefined,
+                                "min": undefined,
+                                "now": undefined,
+                                "text": undefined,
+                              }
+                            }
+                            accessible={true}
+                            collapsable={false}
+                            focusable={true}
+                            onBlur={[Function]}
+                            onClick={[Function]}
+                            onFocus={[Function]}
+                            onResponderGrant={[Function]}
+                            onResponderMove={[Function]}
+                            onResponderRelease={[Function]}
+                            onResponderTerminate={[Function]}
+                            onResponderTerminationRequest={[Function]}
+                            onStartShouldSetResponder={[Function]}
+                            style={
+                              [
+                                false,
+                                {
+                                  "padding": 32,
+                                },
+                              ]
+                            }
+                          >
+                            <Text
+                              style={
+                                {
+                                  "color": "#000000",
+                                  "fontFamily": "roboto",
+                                  "fontSize": 28,
+                                }
+                              }
+                            >
+                              Throw Error
                             </Text>
                           </View>
                         </View>
@@ -260,7 +338,7 @@ exports[`App renders correctly 1`] = `
               </View>
             </View>
           </View>
-        </RNSScreen>
+        </RNSModalScreen>
       </RNSScreenContainer>
       <View
         collapsable={false}

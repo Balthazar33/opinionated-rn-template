@@ -18,9 +18,9 @@
     "android-tasks": "cd android && gradlew tasks",
     "load-splash-asset": "npx react-native generate-bootsplash ./assets/logo.png --background=FFFFFF --logo-width=200 --assets-output=./assets",
     "android:dev": "cd android && gradlew clean && gradlew installDevelopmentDebug",
-    "android:prod": "cd android && gradlew clean && cd .. && npx react-native run-android --active-arch-only --mode productiondebug",
-    "android:qa": "cd android && gradlew clean && cd .. && npx react-native run-android --active-arch-only --mode qadebug",
-    "android:stage": "cd android && gradlew clean && cd .. && npx react-native run-android --active-arch-only --mode stagedebug"
+    "android:stage": "cd android && gradlew clean && gradlew installStageDebug",
+    "android:prod": "cd android && gradlew clean && gradlew installProductionDebug",
+    "android:qa": "cd android && gradlew clean && gradlew installQaDebug"
   },
   "dependencies": {
     "@react-native-community/netinfo": "^11.3.1",
@@ -30,7 +30,6 @@
     "@react-navigation/native-stack": "^6.9.26",
     "@react-navigation/stack": "^6.3.29",
     "@reduxjs/toolkit": "^1.9.7",
-    "@testing-library/react-native": "^12.4.3",
     "@types/jest": "^29.5.12",
     "moment": "^2.30.1",
     "react": "18.2.0",
@@ -59,6 +58,7 @@
     "@react-native/eslint-config": "0.73.2",
     "@react-native/metro-config": "0.73.5",
     "@react-native/typescript-config": "0.73.1",
+    "@testing-library/react-native": "^12.4.4",
     "@types/react": "^18.2.72",
     "@types/react-test-renderer": "^18.0.0",
     "@typescript-eslint/eslint-plugin": "^6.18.0",

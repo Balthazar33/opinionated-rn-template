@@ -8,7 +8,7 @@ import '@testing-library/react-native/extend-expect';
 import {screen, waitFor} from '@testing-library/react-native';
 
 import {PokemonDetailScreen} from '..';
-import {renderWithProviders} from '../../utils/test-utils';
+import {renderWithProviders} from '@utils/test-utils';
 import {BASE_URL} from '../../services/testApi/pokemonApi';
 import {PokemonDetailScreenProps} from '../PokemonDetailScreen/PokemonDetailScreen.types';
 

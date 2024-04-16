@@ -1,5 +1,5 @@
-import {setPokemonDetails} from '../../appRedux/slices/pokemonSlice';
-import {AppDispatch} from '../../appRedux/store.utils';
+import {setPokemonDetails} from '@redux/slices/pokemonSlice';
+import {AppDispatch} from '@redux/store.utils';
 import {callApi} from '../../services/apiCaller';
 
 /**

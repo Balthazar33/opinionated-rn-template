@@ -2,7 +2,7 @@ import React from 'react';
 import {View} from 'react-native';
 import {TextRegular12, TextRegular14} from './Typography';
 import {Button} from 'react-native-paper';
-import {Strings} from '../utils/strings';
+import {Strings} from '@utils/strings';
 
 export const ErrorFallback = ({resetError}: {resetError: () => void}) => {
   return (

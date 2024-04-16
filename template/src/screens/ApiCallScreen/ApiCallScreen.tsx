@@ -4,16 +4,16 @@ import {FlatList, StyleSheet} from 'react-native';
 import {TouchableRipple} from 'react-native-paper';
 
 import BaseScreen from '../../containers/BaseScreen';
-import {useAppDispatch, useAppSelector} from '../../appRedux/store.utils';
+import {useAppDispatch, useAppSelector} from '@redux/store.utils';
 import {useGetAllPokemonMutation} from '../../services/testApi/pokemonApi';
 import {getAllPokemon} from './ApiCallScreen.utils';
 import {ApiCallScreenProps, PokemonItemType} from './ApiCallScreen.types';
-import {sizer} from '../../utils/metrics';
-import {SCREEN_PADDING} from '../../utils/constants';
-import {Strings} from '../../utils/strings';
+import {sizer} from '@utils/metrics';
+import {SCREEN_PADDING} from '@utils/constants';
+import {Strings} from '@utils/strings';
 import {PokemonItem} from './PokemonItem';
-import {TestIds} from '../../utils/test-ids';
-import {TextBold12, TextRegular12} from '../../components/Typography';
+import {TestIds} from '@utils/test-ids';
+import {TextBold12, TextRegular12} from '@components/Typography';
 
 export const ApiCallScreen = ({navigation}: ApiCallScreenProps) => {
   const dispatch = useAppDispatch();

@@ -2,14 +2,14 @@ import React, {useEffect} from 'react';
 import {StyleSheet} from 'react-native';
 
 import BaseScreen from '../../containers/BaseScreen';
-import {sizer} from '../../utils/metrics';
-import {SCREEN_PADDING} from '../../utils/constants';
+import {sizer} from '@utils/metrics';
+import {SCREEN_PADDING} from '@utils/constants';
 import {useGetDetailsByNameMutation} from '../../services/testApi/pokemonApi';
-import {useAppDispatch, useAppSelector} from '../../appRedux/store.utils';
+import {useAppDispatch, useAppSelector} from '@redux/store.utils';
 import {getDetails} from './PokemonDetailScreen.utils';
-import {clearCurrent} from '../../appRedux/slices/pokemonSlice';
+import {clearCurrent} from '@redux/slices/pokemonSlice';
 import {PokemonDetailScreenProps} from './PokemonDetailScreen.types';
-import {TextRegular10, TextRegular12} from '../../components/Typography';
+import {TextRegular10, TextRegular12} from '@components/Typography';
 
 export const PokemonDetailScreen = ({route}: PokemonDetailScreenProps) => {
   const {name} = route?.params || {};

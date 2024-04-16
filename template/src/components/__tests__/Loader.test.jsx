@@ -7,8 +7,8 @@ import '@testing-library/react-native/extend-expect';
 
 // Note: test renderer must be required after react-native.
 import renderer from 'react-test-renderer';
-import {TestIds} from '../../utils/test-ids';
-import {Colors} from '../../utils/colors';
+import {TestIds} from '@utils/test-ids';
+import {Colors} from '@utils/colors';
 
 describe('Loader', () => {
   it('renders correctly', () => {

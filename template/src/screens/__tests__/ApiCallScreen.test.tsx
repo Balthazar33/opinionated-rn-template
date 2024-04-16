@@ -8,11 +8,11 @@ import '@testing-library/react-native/extend-expect';
 
 import {ApiCallScreen} from '..';
 import * as PokeApi from '../../services/testApi/pokemonApi';
-import {renderWithProviders} from '../../utils/test-utils';
+import {renderWithProviders} from '@utils/test-utils';
 import {ApiCallScreenProps} from '../ApiCallScreen/ApiCallScreen.types';
 import {BASE_URL} from '../../services/testApi/pokemonApi';
 import {Endpoints} from '../../services/testApi/pokemonApi.endpoints';
-import {TestIds} from '../../utils/test-ids';
+import {TestIds} from '@utils/test-ids';
 import {fireEvent, waitFor, screen} from '@testing-library/react-native';
 
 //Test Setup-----------------------------------------------------

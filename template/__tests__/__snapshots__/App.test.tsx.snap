@@ -225,7 +225,7 @@ exports[`App renders correctly 1`] = `
                             }
                           >
                              
-                            Base Screen
+                            Hi
                           </Text>
                           <View
                             accessibilityState={

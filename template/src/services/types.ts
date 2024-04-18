@@ -1,4 +1,4 @@
-import {AppDispatch} from '../appRedux/store.utils';
+import {AppDispatch} from '@redux/store.utils';
 
 export interface ApiCallWithErrorHandling {
   apiCall: (params: any) => any;

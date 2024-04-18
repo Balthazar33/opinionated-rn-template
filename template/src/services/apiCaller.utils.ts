@@ -1,4 +1,4 @@
-import {Strings} from '../utils/strings';
+import {Strings} from '@utils/strings';
 import {StatusCodes} from './types';
 
 // verify if api cal was successful

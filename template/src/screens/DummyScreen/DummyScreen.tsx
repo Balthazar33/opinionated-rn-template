@@ -3,14 +3,14 @@ import {StyleSheet} from 'react-native';
 
 import {TouchableRipple} from 'react-native-paper';
 
-import {sizer} from '../../utils/metrics';
-import {Strings} from '../../utils/strings';
-import {TestIds} from '../../utils/test-ids';
-import {SCREEN_PADDING} from '../../utils/constants';
+import {sizer} from '@utils/metrics';
+import {Strings} from '@utils/strings';
+import {TestIds} from '@utils/test-ids';
+import {SCREEN_PADDING} from '@utils/constants';
 import {StackScreens} from '../../navigation/types';
 import {DummyScreenProps} from './DummyScreen.types';
 import BaseScreen from '../../containers/BaseScreen';
-import {TextRegular12, TextRegular14} from '../../components/Typography';
+import {TextRegular12, TextRegular14} from '@components/Typography';
 
 export const DummyScreen = ({navigation}: DummyScreenProps) => {
   const [showError, setShowError] = useState(false);
@@ -34,7 +34,7 @@ export const DummyScreen = ({navigation}: DummyScreenProps) => {
   }
   return (
     <BaseScreen testID={TestIds.DUMMYSCREEN} style={style.screenStyle}>
-      <TextRegular12> {Strings.baseScreen}</TextRegular12>
+      <TextRegular12> {'Hi'}</TextRegular12>
       <TouchableRipple
         onPress={handleBtnPress}
         style={style.buttonStyle}

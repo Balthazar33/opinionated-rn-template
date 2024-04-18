@@ -1,8 +1,8 @@
 import styled from 'styled-components/native';
 
-import {sizer} from '../utils/metrics';
-import {Fonts} from '../utils/constants';
-import {Colors} from '../utils/colors';
+import {sizer} from '@utils/metrics';
+import {Fonts} from '@utils/constants';
+import {Colors} from '@utils/colors';
 
 interface ColorProps {
   color?: string;

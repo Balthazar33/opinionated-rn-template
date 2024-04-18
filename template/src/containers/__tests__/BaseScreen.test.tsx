@@ -6,7 +6,7 @@ import {render} from '@testing-library/react-native';
 import '@testing-library/react-native/extend-expect';
 
 import BaseScreen from '../BaseScreen';
-import * as hooks from '../../hooks/useInternet';
+import * as hooks from '@hooks/useInternet';
 import {TestIds} from '@utils/test-ids';
 
 describe('BaseScreen', () => {

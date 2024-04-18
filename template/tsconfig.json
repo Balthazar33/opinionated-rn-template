@@ -9,6 +9,8 @@
       "@utils/*": ["./src/utils/*"],
       "@screens/*": ["./src/screens/*"],
       "@redux/*": ["./src/appRedux/*"],
+      "@hooks/*": ["./src/hooks/*"],
+      "@services/*": ["./src/services/*"],
     },
   },
 }

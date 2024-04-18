@@ -1,6 +1,6 @@
 import {configureStore} from '@reduxjs/toolkit';
 import rootReducer from './slices';
-import {pokemonApi} from '../services/testApi/pokemonApi';
+import {pokemonApi} from '@services/testApi/pokemonApi';
 import loadingHandler from './middleware/loadingHandler';
 
 const configureAppStore = (preloadedState?: any) => {

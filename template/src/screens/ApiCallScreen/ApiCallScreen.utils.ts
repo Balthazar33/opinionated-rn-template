@@ -1,6 +1,6 @@
 import {setAll} from '@redux/slices/pokemonSlice';
 import {AppDispatch} from '@redux/store.utils';
-import {callApi} from '../../services/apiCaller';
+import {callApi} from '@services/apiCaller';
 
 interface ApiCallParameters {
   dispatch: AppDispatch;

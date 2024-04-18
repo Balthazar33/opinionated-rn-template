@@ -1,6 +1,6 @@
 import {setPokemonDetails} from '@redux/slices/pokemonSlice';
 import {AppDispatch} from '@redux/store.utils';
-import {callApi} from '../../services/apiCaller';
+import {callApi} from '@services/apiCaller';
 
 /**
  * Fetch & set pokemon details

@@ -4,7 +4,7 @@ import {StyleSheet} from 'react-native';
 import BaseScreen from '../../containers/BaseScreen';
 import {sizer} from '@utils/metrics';
 import {SCREEN_PADDING} from '@utils/constants';
-import {useGetDetailsByNameMutation} from '../../services/testApi/pokemonApi';
+import {useGetDetailsByNameMutation} from '@services/testApi/pokemonApi';
 import {useAppDispatch, useAppSelector} from '@redux/store.utils';
 import {getDetails} from './PokemonDetailScreen.utils';
 import {clearCurrent} from '@redux/slices/pokemonSlice';

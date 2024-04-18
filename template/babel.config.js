@@ -13,6 +13,8 @@ module.exports = {
           '@screens': './src/screens',
           '@utils': './src/utils',
           '@redux': './src/appRedux',
+          '@hooks': './src/hooks',
+          '@services': './src/services',
         },
       },
     ],

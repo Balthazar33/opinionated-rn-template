@@ -8,9 +8,9 @@ import {
   CommonResponse,
   ApiCallWithErrorHandling,
 } from './types';
-import {Strings} from '../utils/strings';
-import {store} from '../appRedux/store.utils';
-import {resetAll} from '../appRedux/appActions';
+import {Strings} from '@utils/strings';
+import {store} from '@redux/store.utils';
+import {resetAll} from '@redux/appActions';
 import {
   isSuccessful,
   GENERIC_ERROR,

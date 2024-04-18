@@ -1,7 +1,7 @@
 import {PayloadAction} from '@reduxjs/toolkit';
 
 import {setLoading} from '../slices/appSlice';
-import {RequestState} from '../../utils/global-types';
+import {RequestState} from '@utils/global-types';
 
 /**
  * Control loading state based on RTK query response

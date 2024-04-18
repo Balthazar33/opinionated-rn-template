@@ -8,12 +8,12 @@ import {
   ViewStyle,
 } from 'react-native';
 
-import {TestIds} from '../utils/test-ids';
-import {withScroll} from '../hocs/withScroll';
-import {commonStyles} from '../utils/common-styles';
-import {Colors} from '../utils/colors';
-import {NoInternet} from '../components';
-import {useInternet} from '../hooks';
+import {TestIds} from '@utils/test-ids';
+import {withScroll} from '@/hocs/withScroll';
+import {commonStyles} from '@utils/common-styles';
+import {Colors} from '@utils/colors';
+import {NoInternet} from '@components/index';
+import {useInternet} from '@hooks/index';
 
 export interface BaseScreenProps {
   testID?: string;

@@ -5,8 +5,8 @@ import {render} from '@testing-library/react-native';
 import '@testing-library/react-native/extend-expect';
 
 import {AppContainer} from '../AppContainer';
-import {TestIds} from '../../utils/test-ids';
-import * as store from '../../appRedux/store.utils';
+import {TestIds} from '@utils/test-ids';
+import * as store from '@redux/store.utils';
 
 describe('AppContainer', () => {
   it('should display the activity indicator if "loading" is true in store', () => {

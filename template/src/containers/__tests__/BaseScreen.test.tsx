@@ -6,8 +6,8 @@ import {render} from '@testing-library/react-native';
 import '@testing-library/react-native/extend-expect';
 
 import BaseScreen from '../BaseScreen';
-import * as hooks from '../../hooks/useInternet';
-import {TestIds} from '../../utils/test-ids';
+import * as hooks from '@hooks/useInternet';
+import {TestIds} from '@utils/test-ids';
 
 describe('BaseScreen', () => {
   it('should display the "NoInternet" component when connectivity is NOT available', () => {

@@ -1,8 +1,8 @@
 import React from 'react';
 import {ActivityIndicator, StyleSheet, View} from 'react-native';
 
-import {Colors, withOpacity} from '../utils/colors';
-import {TestIds} from '../utils/test-ids';
+import {Colors, withOpacity} from '@utils/colors';
+import {TestIds} from '@utils/test-ids';
 
 interface LoaderProps {
   size?: 'small' | 'large' | number;

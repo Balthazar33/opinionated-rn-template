@@ -6,7 +6,7 @@ import '@testing-library/react-native/extend-expect';
 import {fireEvent, render} from '@testing-library/react-native';
 
 import {DummyScreen} from '..';
-import {TestIds} from '../../utils/test-ids';
+import {TestIds} from '@utils/test-ids';
 import {DummyScreenProps} from '../DummyScreen/DummyScreen.types';
 import {StackScreens} from '../../navigation/types';
 

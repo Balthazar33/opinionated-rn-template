@@ -7,36 +7,38 @@ import {
   StatusCodes,
   CommonResponse,
   ApiCallWithErrorHandling,
+  ApiCallResponse,
 } from './types';
 import {Strings} from '@utils/strings';
-import {store} from '@redux/store.utils';
-import {resetAll} from '@redux/appActions';
-import {
-  isSuccessful,
-  GENERIC_ERROR,
-  NO_INTERNET_ERROR,
-} from './apiCaller.utils';
+// import {store} from '@redux/store.utils';
+// import {resetAll} from '@redux/appActions';
+import {GENERIC_ERROR, NO_INTERNET_ERROR, didSucceed} from './apiCaller.utils';
+import {Alert} from 'react-native';
+import {isNetworkError} from '@/utils/helper';
 
-export async function callApi({
+export const callApi: (
+  args: ApiCallWithErrorHandling,
+) => Promise<ApiCallResponse> = async ({
   params,
   apiCall,
   dispatch,
-}: ApiCallWithErrorHandling) {
+}: ApiCallWithErrorHandling) => {
   return NetInfo.fetch().then(async (state: any) => {
     if (state.isConnected) {
       const response = await apiCall(params)
         .unwrap() // unwrap api call
-        .then((data: CommonResponse) => {
-          const {status, message, code} = data;
+        .then((result: CommonResponse) => {
+          const {data, meta} = result;
           // if api call succeeds...
-          if (isSuccessful(code, status)) {
-            return {isSuccess: true, data};
+          if (didSucceed(meta?.response?.status)) {
+            return {error: false, data};
           }
-          // else, return error message if available
+          // else, return error
           return {
-            isSuccess: false,
-            data,
-            errorMessage: message || Strings.genericError,
+            error: {
+              message: meta?.response?.statusText || Strings.genericError,
+            },
+            data: null,
           };
         })
         .catch((error: ApiError | any) => {
@@ -44,7 +46,7 @@ export async function callApi({
             apiCall,
             dispatch,
             params,
-            errorCode: error.status,
+            errorCode: error?.status,
             error,
           });
           return GENERIC_ERROR;
@@ -53,7 +55,7 @@ export async function callApi({
     }
     return NO_INTERNET_ERROR;
   });
-}
+};
 
 export async function handleServerError({
   error,
@@ -75,27 +77,34 @@ export async function handleServerError({
       (errorCode === StatusCodes.ERROR400 || errorCode === StatusCodes.ERROR404)
     ) {
       // handle error or retry conditionally
-      callApi({apiCall, params, dispatch});
+      Alert.alert('Error', title, [
+        {text: 'OK', onPress: () => {}},
+        {text: 'Retry', onPress: () => callApi({apiCall, params, dispatch})},
+      ]);
     }
 
     // log out user if status code is 401
     if (errorCode === StatusCodes.ERROR401) {
       try {
         // clear credentials or reset store
-        store.dispatch(resetAll());
+        // store.dispatch(resetAll());
+        Alert.alert('Error', title, [
+          {text: 'OK', onPress: () => {}},
+          {text: 'Retry', onPress: () => callApi({apiCall, params, dispatch})},
+        ]);
       } catch (e: any) {
         // empty
       }
     }
-  } else if (
-    error?.status?.toString().toLowerCase() === Strings.fetchError ||
-    error?.errror
-      ?.toString()
-      .toLowerCase()
-      .includes(Strings.networkRequestFailed)
-  ) {
-    // no internet
+  } else if (isNetworkError(error)) {
+    Alert.alert('Error', NO_INTERNET_ERROR.error.message, [
+      {text: 'OK', onPress: () => {}},
+      {text: 'Retry', onPress: () => callApi({apiCall, params, dispatch})},
+    ]);
   } else {
-    // generic error
+    Alert.alert('Error', Strings.genericError, [
+      {text: 'OK', onPress: () => {}},
+      {text: 'Retry', onPress: () => callApi({apiCall, params, dispatch})},
+    ]);
   }
 }

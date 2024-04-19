@@ -13,6 +13,7 @@ export const pokemonApi = createApi({
         url: Endpoints.ALL,
         method: FetchMethods.GET,
       }),
+      transformResponse: (response, meta, _) => ({data: response, meta}),
     }),
     // Get pokemon details by name
     getDetailsByName: builder.mutation({
@@ -20,6 +21,7 @@ export const pokemonApi = createApi({
         url: `${Endpoints.ALL}${name}`,
         method: FetchMethods.GET,
       }),
+      transformResponse: (response, meta, _) => ({data: response, meta}),
     }),
     // The endpoint for the following POST request does not exist and is added merely as an example
     addPokemonByName: builder.mutation({
@@ -28,6 +30,7 @@ export const pokemonApi = createApi({
         method: FetchMethods.POST,
         body,
       }),
+      transformResponse: (response, meta, _) => ({data: response, meta}),
     }),
   }),
 });

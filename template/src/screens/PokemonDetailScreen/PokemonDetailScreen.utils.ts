@@ -20,9 +20,9 @@ export const getDetails = async ({
       params,
       dispatch,
     });
-    if (!response.data && !response.isSuccess) {
+    if (response.error) {
       // throw error
-      throw new Error(response.errorMessage);
+      throw new Error(response.error.message);
     } else {
       // process data
       dispatch(setPokemonDetails(response.data));

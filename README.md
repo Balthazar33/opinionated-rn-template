@@ -89,7 +89,7 @@ npm run test:screens
 ```
 
 ## 🐛Error boundary
-This template has an error boundary configured to catch JavaScript run-time errors and display a fallback UI to minimize app crashes.\
+This template has an error boundary configured to intercept JavaScript run-time errors and display a fallback UI to minimize app crashes.\
 Package used: [`react-native-error-boundary`](https://www.npmjs.com/package/react-native-error-boundary)\
 Learn more about error boundaries [here](https://react.dev/reference/react/Component#catching-rendering-errors-with-an-error-boundary).
 
@@ -104,6 +104,8 @@ const encryptedStorage = new MMKVLoader().withEncryption().initialize()
 ## 💻DX
 - `eslint-plugin-unicorn` 
 Integrated for extending ESLint rules. [Learn more](https://github.com/sindresorhus/eslint-plugin-unicorn)
+- `babel-plugin-module-resolver`
+Integrated for supporting absolute paths. [Learn more](https://www.npmjs.com/package/babel-plugin-module-resolver)
 - `@commitlint/config-conventional`
 Integrated for enforcing commit message rules and enhancing dx.
 Usage:

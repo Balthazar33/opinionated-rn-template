@@ -2,22 +2,16 @@ import {Strings} from '@utils/strings';
 import {StatusCodes} from './types';
 
 // verify if api cal was successful
-export const isSuccessful = (code: StatusCodes | undefined, status: number) => {
-  return (
-    status === 1 ||
-    code === StatusCodes.SUCCESS200 ||
-    code === StatusCodes.SUCCESS201
-  );
+export const didSucceed = (status: StatusCodes | undefined) => {
+  return status === StatusCodes.SUCCESS200 || status === StatusCodes.SUCCESS201;
 };
 
 export const GENERIC_ERROR = {
-  isSuccess: false,
+  error: {message: Strings.genericError},
   data: null,
-  errorMessage: Strings.genericError,
 };
 
 export const NO_INTERNET_ERROR = {
-  isSuccess: false,
+  error: {message: Strings.noInternet},
   data: null,
-  errorMessage: Strings.noInternet,
 };

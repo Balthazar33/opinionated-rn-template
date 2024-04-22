@@ -6,17 +6,24 @@ export interface ApiCallWithErrorHandling {
   dispatch: AppDispatch;
 }
 
-export interface ApiResponse {
-  data: any;
-  errorMessage?: string;
-  isSuccess: boolean;
+export interface ApiCallResponse {
+  data: null | any;
+  error: {
+    message?: string;
+  };
+}
+
+interface Meta {
+  headers?: any;
+  status: number;
+  statusText: string;
 }
 
 export interface CommonResponse {
-  code?: StatusCodes;
-  message: string;
-  status: 0 | 1;
-  success?: boolean;
+  data: any;
+  meta?: {
+    response: Meta;
+  }; // API call meta data
 }
 
 export enum FetchErrorStatus {

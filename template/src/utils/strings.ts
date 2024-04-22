@@ -18,4 +18,6 @@ export const Strings = {
   throwError: 'Throw Error',
   whoops: 'Whoops!',
   tryAgain: 'Try Again',
+  ok: 'OK',
+  error: 'Error',
 };

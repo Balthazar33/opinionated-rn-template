@@ -20,8 +20,8 @@ export const getAllPokemon = async ({
 }: ApiCallParameters) => {
   try {
     const response = await callApi({
-      apiCall,
       params,
+      apiCall,
       dispatch,
     });
     // modify as per requirement

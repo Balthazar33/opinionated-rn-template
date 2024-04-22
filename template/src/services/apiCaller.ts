@@ -1,3 +1,5 @@
+import {Alert} from 'react-native';
+
 import NetInfo from '@react-native-community/netinfo';
 
 import {
@@ -6,15 +8,14 @@ import {
   ServerError,
   StatusCodes,
   CommonResponse,
-  ApiCallWithErrorHandling,
   ApiCallResponse,
+  ApiCallWithErrorHandling,
 } from './types';
 import {Strings} from '@utils/strings';
 // import {store} from '@redux/store.utils';
 // import {resetAll} from '@redux/appActions';
-import {GENERIC_ERROR, NO_INTERNET_ERROR, didSucceed} from './apiCaller.utils';
-import {Alert} from 'react-native';
 import {isNetworkError} from '@/utils/helper';
+import {GENERIC_ERROR, NO_INTERNET_ERROR, didSucceed} from './apiCaller.utils';
 
 export const callApi: (
   args: ApiCallWithErrorHandling,
@@ -43,11 +44,11 @@ export const callApi: (
         })
         .catch((error: ApiError | any) => {
           handleServerError({
+            error,
+            params,
             apiCall,
             dispatch,
-            params,
             errorCode: error?.status,
-            error,
           });
           return GENERIC_ERROR;
         });
@@ -64,6 +65,13 @@ export async function handleServerError({
   dispatch,
   errorCode,
 }: ServerError) {
+  const alertOptions = [
+    {text: Strings.ok, onPress: () => {}},
+    {
+      text: Strings.tryAgain,
+      onPress: () => callApi({apiCall, params, dispatch}),
+    },
+  ];
   if (errorCode) {
     const ErrorCodeTitle: Record<ErrorType, string> = {
       400: Strings.error400,
@@ -77,10 +85,7 @@ export async function handleServerError({
       (errorCode === StatusCodes.ERROR400 || errorCode === StatusCodes.ERROR404)
     ) {
       // handle error or retry conditionally
-      Alert.alert('Error', title, [
-        {text: 'OK', onPress: () => {}},
-        {text: 'Retry', onPress: () => callApi({apiCall, params, dispatch})},
-      ]);
+      Alert.alert(Strings.error, title, alertOptions);
     }
 
     // log out user if status code is 401
@@ -88,23 +93,14 @@ export async function handleServerError({
       try {
         // clear credentials or reset store
         // store.dispatch(resetAll());
-        Alert.alert('Error', title, [
-          {text: 'OK', onPress: () => {}},
-          {text: 'Retry', onPress: () => callApi({apiCall, params, dispatch})},
-        ]);
+        Alert.alert(Strings.error, title, alertOptions);
       } catch (e: any) {
         // empty
       }
     }
   } else if (isNetworkError(error)) {
-    Alert.alert('Error', NO_INTERNET_ERROR.error.message, [
-      {text: 'OK', onPress: () => {}},
-      {text: 'Retry', onPress: () => callApi({apiCall, params, dispatch})},
-    ]);
+    Alert.alert(Strings.error, NO_INTERNET_ERROR.error.message, alertOptions);
   } else {
-    Alert.alert('Error', Strings.genericError, [
-      {text: 'OK', onPress: () => {}},
-      {text: 'Retry', onPress: () => callApi({apiCall, params, dispatch})},
-    ]);
+    Alert.alert(Strings.error, Strings.genericError, alertOptions);
   }
 }

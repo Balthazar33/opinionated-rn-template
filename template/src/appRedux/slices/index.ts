@@ -3,7 +3,7 @@ import {persistReducer} from 'redux-persist';
 
 import themeSlice from './themeSlice';
 import appSlice from './appSlice';
-import {pokeGraphApi} from '@services/graphqlApi/pokeGraphApi';
+import {pokemonApi} from '@services/testApi/pokemonApi';
 import pokemonSlice from './pokemonSlice';
 import {pokemonStorage, mmkvPersistor} from '../../storage/mmkvStorage';
 import {StorageKeys} from '../../storage/storage.utils';
@@ -21,7 +21,7 @@ const pokemonListConfig = {
 
 const rootReducer = combineReducers({
   app: appSlice,
-  [pokeGraphApi.reducerPath]: pokeGraphApi.reducer,
+  [pokemonApi.reducerPath]: pokemonApi.reducer,
   theme: persistReducer(themeConfig, themeSlice),
   pokemon: persistReducer(pokemonListConfig, pokemonSlice),
 });

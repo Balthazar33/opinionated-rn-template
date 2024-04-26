@@ -215,6 +215,18 @@ exports[`App renders correctly 1`] = `
                           }
                           testID="DummyScreen"
                         >
+                          <Text
+                            style={
+                              {
+                                "color": "#000000",
+                                "fontFamily": "roboto",
+                                "fontSize": 24,
+                              }
+                            }
+                          >
+                             
+                            Hi
+                          </Text>
                           <View
                             accessibilityState={
                               {

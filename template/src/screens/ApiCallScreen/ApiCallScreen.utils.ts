@@ -30,7 +30,7 @@ export const getAllPokemon = async ({
       throw new Error(response.error.message);
     } else {
       // process data
-      const responseData = response.data?.data?.pokemons as PokemonResponse;
+      const responseData = response.data as PokemonResponse;
       dispatch(setAll(responseData?.results || []));
     }
   } catch (error) {

@@ -7,9 +7,11 @@ import {it, describe, expect} from '@jest/globals';
 import '@testing-library/react-native/extend-expect';
 
 import {ApiCallScreen} from '..';
-import * as PokeApi from '@services/graphqlApi/pokeGraphApi';
+import * as PokeApi from '@services/testApi/pokemonApi';
 import {renderWithProviders} from '@utils/test-utils';
 import {ApiCallScreenProps} from '../ApiCallScreen/ApiCallScreen.types';
+import {BASE_URL} from '@services/testApi/pokemonApi';
+import {Endpoints} from '@services/testApi/pokemonApi.endpoints';
 import {TestIds} from '@utils/test-ids';
 import {fireEvent, waitFor, screen} from '@testing-library/react-native';
 
@@ -22,23 +24,19 @@ const route: Partial<ApiCallScreenProps['route']> = {
 };
 export const handlers = [
   // Mocked API response
-  http.post(PokeApi.BASE_URL, async () => {
+  http.get(`${BASE_URL}${Endpoints.ALL}`, async () => {
     await delay(150);
     return HttpResponse.json({
-      data: {
-        pokemons: {
-          results: [
-            {
-              name: 'bulbasaur',
-              url: '',
-            },
-            {
-              name: 'ivysaur',
-              url: '',
-            },
-          ],
+      results: [
+        {
+          name: 'bulbasaur',
+          url: '',
         },
-      },
+        {
+          name: 'ivysaur',
+          url: '',
+        },
+      ],
     });
   }),
 ];

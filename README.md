@@ -51,6 +51,8 @@ const {value} = useAppSelector(state => state.sliceName);
 ## 📶 Managing API calls
 **RTK Query** has been configured to make API calls. Navigate to `src/services/testApi` and refer the sample api. A helper method to make API calls with error handling has been added in `src/services/apiCaller.ts` file. Learn more about RTK Query [here.](https://redux-toolkit.js.org/rtk-query/overview)
 
+*(To see how RTK Query works with GraphQL, switch to the **feat/graphQL** branch)*
+
 ## 📱 Splash Screen
 `react-native-bootsplash` is used in this template to control the splash screen behavior and appearance. To display a custom icon on the splash screen, replace the `logo.png` image with your custom image in the `assets` folder at the project root and run
 ```bash

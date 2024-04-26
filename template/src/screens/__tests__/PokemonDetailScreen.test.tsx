@@ -9,7 +9,7 @@ import {screen, waitFor} from '@testing-library/react-native';
 
 import {PokemonDetailScreen} from '..';
 import {renderWithProviders} from '@utils/test-utils';
-import {BASE_URL} from '@services/testApi/pokemonApi';
+import {BASE_URL} from '@services/graphqlApi/pokeGraphApi';
 import {PokemonDetailScreenProps} from '../PokemonDetailScreen/PokemonDetailScreen.types';
 
 //Test Setup------------------------------------------------------------
@@ -22,11 +22,15 @@ const route: Partial<PokemonDetailScreenProps['route']> = {
 };
 export const handlers = [
   // Mocked API response
-  http.get(`${BASE_URL}pokemon/${TEST_POKEMON}`, async () => {
+  http.post(BASE_URL, async () => {
     await delay(150);
     return HttpResponse.json({
-      name: TEST_POKEMON,
-      weight: 130,
+      data: {
+        pokemon: {
+          name: TEST_POKEMON,
+          weight: 130,
+        },
+      },
     });
   }),
 ];

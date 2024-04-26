@@ -25,8 +25,7 @@ export const getDetails = async ({
       throw new Error(response.error.message);
     } else {
       // process data
-      const responseData = response.data?.data?.pokemon;
-      dispatch(setPokemonDetails(responseData ?? {}));
+      dispatch(setPokemonDetails(response.data));
     }
   } catch (error) {
     // handle error

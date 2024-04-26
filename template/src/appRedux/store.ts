@@ -1,6 +1,6 @@
 import {configureStore} from '@reduxjs/toolkit';
 import rootReducer from './slices';
-import {pokeGraphApi} from '@services/graphqlApi/pokeGraphApi';
+import {pokemonApi} from '@services/testApi/pokemonApi';
 import loadingHandler from './middleware/loadingHandler';
 
 const configureAppStore = (preloadedState?: any) => {
@@ -10,7 +10,7 @@ const configureAppStore = (preloadedState?: any) => {
       getDefaultMiddleware({
         serializableCheck: false,
       })
-        .concat(pokeGraphApi.middleware) // append RTKQuery middleware (for each API)
+        .concat(pokemonApi.middleware) // append RTKQuery middleware (for each API)
         .concat(loadingHandler), // custom middleware
     preloadedState,
   });

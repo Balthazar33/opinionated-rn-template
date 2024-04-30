@@ -8,7 +8,7 @@ export const pokeGraphApi = createApi({
   reducerPath: 'pokeGraphApi',
   baseQuery: fetchBaseQuery({baseUrl: BASE_URL}),
   endpoints: builder => ({
-    // Get pokemon details by name
+    // Get all pokemon
     getAllPokemon: builder.mutation({
       query: ({count}) => ({
         url: '',

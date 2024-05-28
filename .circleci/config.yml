@@ -70,11 +70,27 @@ jobs:
           name: Assemble Debug APK
           command: ./gradlew assembleDebug
   
-
+  ios-build:
+    working_directory: ~/rntemplate/template/ios
+    macos:
+      xcode: "15.0.0"
+    steps:
+      - checkout:
+          path: ~/rntemplate
+      - attach_workspace:
+          at: ~/rntemplate
+      - run: cd .. && npm i && cd ios
+      - run: pod install
+      - run:
+          name: Build ios
+          command: npm run ios
 workflows:
   test-lint-build:
     jobs:
       - node-test
+      - ios-build:
+          requires:
+            - node-test
       - android-build:
           requires:
             - node-test

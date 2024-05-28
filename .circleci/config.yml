@@ -83,7 +83,7 @@ jobs:
       - run: bundle install
       - run: bundle update activesupport
       - run: bundle exec pod install
-      # - run: pod install
+      - run: npm run start
       - run:
           name: Build ios
           command: npm run ios

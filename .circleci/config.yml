@@ -84,13 +84,8 @@ jobs:
       - run: bundle update activesupport
       - run: bundle exec pod install
       - run:
-          name: Start node server
-          command: |
-            npm run start
-          background: true
-      - run:
           name: Build ios
-          command: npm run ios
+          command: npm run ios --terminal terminal 
 workflows:
   test-lint-build:
     jobs:

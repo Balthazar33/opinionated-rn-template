@@ -80,7 +80,10 @@ jobs:
       - attach_workspace:
           at: ~/rntemplate
       - run: cd .. && npm i && cd ios
-      - run: pod install
+      - run: bundle install
+      - run: bundle update activesupport
+      - run: bundle exec pod install
+      # - run: pod install
       - run:
           name: Build ios
           command: npm run ios

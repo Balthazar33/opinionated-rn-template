@@ -85,7 +85,7 @@ jobs:
       - run: bundle exec pod install
       - run:
           name: Build ios
-          command: npm run ios -- --terminal terminal 
+          command: npm run ios -- --terminal terminal --configuration=release
 workflows:
   test-lint-build:
     jobs:

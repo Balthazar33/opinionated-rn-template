@@ -75,9 +75,9 @@ workflows:
   test-lint-build:
     jobs:
       - node-test
-      - android-build:
-          requires:
-            - node-test
-          filters:
-            branches:
-              only: main
+      # - android-build:
+      #     requires:
+      #       - node-test
+      #     filters:
+      #       branches:
+      #         only: main

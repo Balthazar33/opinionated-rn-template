@@ -53,6 +53,7 @@ module.exports = {
       '|react-native-error-boundary' +
       '|react-native-keyboard-aware-scroll-view' +
       '|react-native-mmkv-storage' +
+      '|yup' +
       ')/)',
   ],
 };

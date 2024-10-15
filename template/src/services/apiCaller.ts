@@ -98,9 +98,13 @@ export async function handleServerError({
         // empty
       }
     }
-  } else if (isNetworkError(error)) {
-    Alert.alert(Strings.error, NO_INTERNET_ERROR.error.message, alertOptions);
   } else {
-    Alert.alert(Strings.error, Strings.genericError, alertOptions);
+    Alert.alert(
+      Strings.error,
+      isNetworkError(error)
+        ? NO_INTERNET_ERROR.error.message
+        : Strings.genericError,
+      alertOptions,
+    );
   }
 }

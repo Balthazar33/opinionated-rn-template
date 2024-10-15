@@ -3,7 +3,7 @@ export enum TestIds {
   APP_ACTIVITY_INDICATOR = 'ActivityIndicator',
   NO_INTERNET = 'NoInternet',
   TO_API_SCREEN_BTN = 'DummyScreen:ToApiCallScreenBtn',
-  DUMMYSCREEN = 'DummyScreen',
-  APICALL_SCREEN = 'ApiCallScreen',
+  DUMMYSCREEN = 'Screens:DummyScreen',
+  APICALL_SCREEN = 'Screens:ApiCallScreen',
   GET_ALL_POKEMON_BTN = 'ApiCallScreen:GetAllPokemon',
 }

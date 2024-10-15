@@ -20,4 +20,8 @@ export const Strings = {
   tryAgain: 'Try Again',
   ok: 'OK',
   error: 'Error',
+  username: 'Username',
+  contactNo: 'Contact No.',
+  email: 'Email',
+  contact: 'Contact',
 };

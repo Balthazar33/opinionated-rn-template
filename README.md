@@ -106,6 +106,49 @@ Store sensitive data in encrypted storage using **react-native-mmkv-storage**. A
 ```bash
 const encryptedStorage = new MMKVLoader().withEncryption().initialize()
 ```
+
+## 📝Form validation
+Validate form data with [yup](https://www.npmjs.com/package/yup), highlight fields with errors, and display error messages.\
+**Usage**
+```bash
+import {object, string} from 'yup';
+
+const formRef = useRef<FormRef>(null);
+const [username, setUsername] = useState('');
+
+const handleValidate = () => {
+    const isValid = formRef?.current?.validate?.();
+    // handle valid/invalid form data
+};
+
+<Form
+    ref={formRef}
+    formData={[
+        {
+            usernameField: username,
+            // add more fields as necessary
+        }
+    ]}
+    schema={object({
+        usernameField: string().required('Username may not be empty'),
+    })}
+    formElementProps={[
+        {
+            maxLength: 30,
+            value: username,
+            label: 'Username',
+            onChangeText: setUsername,
+            fieldName: 'usernameField',
+            placeholder: '',
+            type: FormElementTypes.TEXT_INPUT,
+            style: {},
+            containerStyle: {}
+        }
+    ]}
+/>
+
+<Button {...buttonProps} onPress={handleValidate} />
+```
 ## 💻DX
 - `eslint-plugin-unicorn` 
 Integrated for extending ESLint rules. [Learn more](https://github.com/sindresorhus/eslint-plugin-unicorn)

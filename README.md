@@ -32,6 +32,9 @@ npm run android:stage && npm run start
 ```
 (*The .env files for each environment can be found in the project root*)
 
+## ↔ Multi-environment support
+Four environments, viz. `staging`, `development`, `production`, and `qa`, have been configured with [react-native-config](https://www.npmjs.com/package/react-native-config), each with its own `.env` file.
+
 ## 🗄️ Global data management
 This template uses **Redux Toolkit** to handle ephemeral data storage.
 ### Usage

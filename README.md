@@ -1,4 +1,4 @@
-# Opinionated RN template
+# Opinionated RN boilerplate
 
 [![Balthazar33](https://circleci.com/gh/Balthazar33/opinionated-rn-template.svg?style=svg)](https://app.circleci.com/pipelines/github/Balthazar33/opinionated-rn-template)
 

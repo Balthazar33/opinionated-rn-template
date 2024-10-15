@@ -22,7 +22,7 @@ exports[`ApiCallScreen renders correctly 1`] = `
         },
       ]
     }
-    testID="ApiCallScreen"
+    testID="Screens:ApiCallScreen"
   >
     <Text
       style={

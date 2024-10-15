@@ -1,144 +1,860 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`DummyScreen renders correctly 1`] = `
-<RCTSafeAreaView
-  style={
+<RCTScrollView
+  contentContainerStyle={
     {
-      "backgroundColor": "transparent",
-      "flex": 1,
+      "flexGrow": 1,
     }
   }
-  testID="AppSafeArea"
+  keyboardShouldPersistTaps="always"
 >
-  <View
-    style={
-      [
+  <View>
+    <RCTSafeAreaView
+      style={
         {
+          "backgroundColor": "transparent",
           "flex": 1,
-        },
-        {
-          "gap": 32,
-          "padding": 32,
-        },
-      ]
-    }
-    testID="DummyScreen"
-  >
-    <Text
-      style={
-        {
-          "color": "#000000",
-          "fontFamily": "roboto",
-          "fontSize": 24,
         }
       }
+      testID="AppSafeArea"
     >
-       
-      Hi
-    </Text>
-    <View
-      accessibilityState={
-        {
-          "busy": undefined,
-          "checked": undefined,
-          "disabled": false,
-          "expanded": undefined,
-          "selected": undefined,
-        }
-      }
-      accessibilityValue={
-        {
-          "max": undefined,
-          "min": undefined,
-          "now": undefined,
-          "text": undefined,
-        }
-      }
-      accessible={true}
-      collapsable={false}
-      focusable={true}
-      onBlur={[Function]}
-      onClick={[Function]}
-      onFocus={[Function]}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderRelease={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
-      style={
-        [
-          false,
-          {
-            "padding": 32,
-          },
-        ]
-      }
-      testID="DummyScreen:ToApiCallScreenBtn"
-    >
-      <Text
+      <View
         style={
-          {
-            "color": "#000000",
-            "fontFamily": "roboto",
-            "fontSize": 28,
-          }
+          [
+            {
+              "flex": 1,
+            },
+            {
+              "gap": 32,
+              "padding": 32,
+            },
+          ]
         }
+        testID="Screens:DummyScreen"
       >
-        To Api Call Screen
-      </Text>
-    </View>
-    <View
-      accessibilityState={
-        {
-          "busy": undefined,
-          "checked": undefined,
-          "disabled": false,
-          "expanded": undefined,
-          "selected": undefined,
-        }
-      }
-      accessibilityValue={
-        {
-          "max": undefined,
-          "min": undefined,
-          "now": undefined,
-          "text": undefined,
-        }
-      }
-      accessible={true}
-      collapsable={false}
-      focusable={true}
-      onBlur={[Function]}
-      onClick={[Function]}
-      onFocus={[Function]}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderRelease={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
-      style={
-        [
-          false,
-          {
-            "padding": 32,
-          },
-        ]
-      }
-    >
-      <Text
-        style={
-          {
-            "color": "#000000",
-            "fontFamily": "roboto",
-            "fontSize": 28,
+        <View
+          accessibilityState={
+            {
+              "busy": undefined,
+              "checked": undefined,
+              "disabled": false,
+              "expanded": undefined,
+              "selected": undefined,
+            }
           }
-        }
-      >
-        Throw Error
-      </Text>
-    </View>
+          accessibilityValue={
+            {
+              "max": undefined,
+              "min": undefined,
+              "now": undefined,
+              "text": undefined,
+            }
+          }
+          accessible={true}
+          collapsable={false}
+          focusable={true}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onFocus={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            [
+              false,
+              {
+                "backgroundColor": "#0000ff",
+                "padding": 32,
+              },
+            ]
+          }
+          testID="DummyScreen:ToApiCallScreenBtn"
+        >
+          <Text
+            color="#ffffff"
+            style={
+              {
+                "color": "#ffffff",
+                "fontFamily": "roboto",
+                "fontSize": 28,
+              }
+            }
+          >
+            To Api Call Screen
+          </Text>
+        </View>
+        <View
+          accessibilityState={
+            {
+              "busy": undefined,
+              "checked": undefined,
+              "disabled": false,
+              "expanded": undefined,
+              "selected": undefined,
+            }
+          }
+          accessibilityValue={
+            {
+              "max": undefined,
+              "min": undefined,
+              "now": undefined,
+              "text": undefined,
+            }
+          }
+          accessible={true}
+          collapsable={false}
+          focusable={true}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onFocus={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            [
+              false,
+              {
+                "backgroundColor": "#0000ff",
+                "padding": 32,
+              },
+            ]
+          }
+        >
+          <Text
+            color="#ffffff"
+            style={
+              {
+                "color": "#ffffff",
+                "fontFamily": "roboto",
+                "fontSize": 28,
+              }
+            }
+          >
+            Throw Error
+          </Text>
+        </View>
+        <View
+          style={
+            {
+              "gap": 16,
+              "marginTop": 16,
+            }
+          }
+        >
+          <Text
+            style={
+              {
+                "color": "#000000",
+                "fontFamily": "roboto",
+                "fontSize": 32,
+              }
+            }
+          >
+            Form
+          </Text>
+          <View>
+            <View
+              style={
+                [
+                  {
+                    "backgroundColor": "rgba(231, 224, 236, 1)",
+                    "borderTopLeftRadius": 4,
+                    "borderTopRightRadius": 4,
+                  },
+                  {
+                    "backgroundColor": "#8a8a8a30",
+                    "fontFamily": "roboto",
+                    "padding": 16,
+                    "width": "100%",
+                  },
+                ]
+              }
+            >
+              <View
+                collapsable={false}
+                style={
+                  {
+                    "backgroundColor": "rgba(73, 69, 79, 1)",
+                    "bottom": 0,
+                    "height": 1,
+                    "left": 0,
+                    "position": "absolute",
+                    "right": 0,
+                    "transform": [
+                      {
+                        "scaleY": 0.5,
+                      },
+                    ],
+                    "zIndex": 1,
+                  }
+                }
+                testID="text-input-underline"
+              />
+              <View
+                onLayout={[Function]}
+                style={
+                  [
+                    {
+                      "paddingBottom": 0,
+                      "paddingTop": 0,
+                    },
+                    {
+                      "minHeight": 56,
+                    },
+                  ]
+                }
+              >
+                <View
+                  collapsable={false}
+                  pointerEvents="none"
+                  style={
+                    {
+                      "bottom": 0,
+                      "left": 0,
+                      "opacity": 1,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                      "transform": [
+                        {
+                          "translateX": 0,
+                        },
+                      ],
+                      "width": 750,
+                      "zIndex": 3,
+                    }
+                  }
+                >
+                  <Text
+                    collapsable={false}
+                    maxFontSizeMultiplier={1.5}
+                    numberOfLines={1}
+                    onLayout={[Function]}
+                    onTextLayout={[Function]}
+                    style={
+                      {
+                        "color": "#000000",
+                        "fontFamily": "System",
+                        "fontSize": 28,
+                        "fontWeight": undefined,
+                        "left": 0,
+                        "letterSpacing": 0.15,
+                        "lineHeight": undefined,
+                        "maxWidth": 73,
+                        "opacity": 0,
+                        "paddingLeft": 16,
+                        "paddingRight": 16,
+                        "position": "absolute",
+                        "textAlign": "left",
+                        "top": 30,
+                        "transform": [
+                          {
+                            "translateX": 0,
+                          },
+                          {
+                            "translateY": 0,
+                          },
+                          {
+                            "scale": 1,
+                          },
+                        ],
+                        "writingDirection": "ltr",
+                      }
+                    }
+                    testID="text-input-flat-label-active"
+                  >
+                    Username
+                  </Text>
+                  <Text
+                    collapsable={false}
+                    maxFontSizeMultiplier={1.5}
+                    numberOfLines={1}
+                    style={
+                      {
+                        "color": "rgba(73, 69, 79, 1)",
+                        "fontFamily": "System",
+                        "fontSize": 28,
+                        "fontWeight": undefined,
+                        "left": 0,
+                        "letterSpacing": 0.15,
+                        "lineHeight": undefined,
+                        "maxWidth": 73,
+                        "opacity": 0,
+                        "paddingLeft": 16,
+                        "paddingRight": 16,
+                        "position": "absolute",
+                        "textAlign": "left",
+                        "top": 30,
+                        "transform": [
+                          {
+                            "translateX": 0,
+                          },
+                          {
+                            "translateY": 0,
+                          },
+                          {
+                            "scale": 1,
+                          },
+                        ],
+                        "writingDirection": "ltr",
+                      }
+                    }
+                    testID="text-input-flat-label-inactive"
+                  >
+                    Username
+                  </Text>
+                </View>
+                <TextInput
+                  cursorColor="#000000"
+                  editable={true}
+                  maxFontSizeMultiplier={1.5}
+                  maxLength={30}
+                  multiline={false}
+                  onBlur={[Function]}
+                  onChangeText={[Function]}
+                  onFocus={[Function]}
+                  outlineColor="#8a8a8a"
+                  placeholder=" "
+                  placeholderTextColor="#8a8a8a"
+                  selectionColor="#000000"
+                  style={
+                    [
+                      {
+                        "margin": 0,
+                      },
+                      {
+                        "height": 56,
+                      },
+                      {
+                        "paddingBottom": 4,
+                        "paddingTop": 24,
+                      },
+                      {
+                        "color": "#000000",
+                        "fontFamily": "System",
+                        "fontSize": 28,
+                        "fontWeight": undefined,
+                        "letterSpacing": 0.15,
+                        "lineHeight": undefined,
+                        "minWidth": 65,
+                        "paddingLeft": 16,
+                        "paddingRight": 16,
+                        "textAlign": "left",
+                        "textAlignVertical": "center",
+                      },
+                      false,
+                      [
+                        {},
+                      ],
+                      undefined,
+                    ]
+                  }
+                  testID="text-input-flat"
+                  underlineColorAndroid="transparent"
+                  value=""
+                />
+              </View>
+            </View>
+          </View>
+          <View
+            style={
+              {
+                "flexDirection": "row",
+                "gap": 8,
+                "justifyContent": "space-between",
+              }
+            }
+          >
+            <View
+              style={
+                {
+                  "flex": 1,
+                }
+              }
+            >
+              <View
+                style={
+                  [
+                    {
+                      "backgroundColor": "rgba(231, 224, 236, 1)",
+                      "borderTopLeftRadius": 4,
+                      "borderTopRightRadius": 4,
+                    },
+                    {
+                      "backgroundColor": "#8a8a8a30",
+                      "fontFamily": "roboto",
+                      "padding": 16,
+                      "width": "100%",
+                    },
+                  ]
+                }
+              >
+                <View
+                  collapsable={false}
+                  style={
+                    {
+                      "backgroundColor": "rgba(73, 69, 79, 1)",
+                      "bottom": 0,
+                      "height": 1,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "transform": [
+                        {
+                          "scaleY": 0.5,
+                        },
+                      ],
+                      "zIndex": 1,
+                    }
+                  }
+                  testID="text-input-underline"
+                />
+                <View
+                  onLayout={[Function]}
+                  style={
+                    [
+                      {
+                        "paddingBottom": 0,
+                        "paddingTop": 0,
+                      },
+                      {
+                        "minHeight": 56,
+                      },
+                    ]
+                  }
+                >
+                  <View
+                    collapsable={false}
+                    pointerEvents="none"
+                    style={
+                      {
+                        "bottom": 0,
+                        "left": 0,
+                        "opacity": 1,
+                        "position": "absolute",
+                        "right": 0,
+                        "top": 0,
+                        "transform": [
+                          {
+                            "translateX": 0,
+                          },
+                        ],
+                        "width": 750,
+                        "zIndex": 3,
+                      }
+                    }
+                  >
+                    <Text
+                      collapsable={false}
+                      maxFontSizeMultiplier={1.5}
+                      numberOfLines={1}
+                      onLayout={[Function]}
+                      onTextLayout={[Function]}
+                      style={
+                        {
+                          "color": "#000000",
+                          "fontFamily": "System",
+                          "fontSize": 28,
+                          "fontWeight": undefined,
+                          "left": 0,
+                          "letterSpacing": 0.15,
+                          "lineHeight": undefined,
+                          "maxWidth": 73,
+                          "opacity": 0,
+                          "paddingLeft": 16,
+                          "paddingRight": 16,
+                          "position": "absolute",
+                          "textAlign": "left",
+                          "top": 30,
+                          "transform": [
+                            {
+                              "translateX": 0,
+                            },
+                            {
+                              "translateY": 0,
+                            },
+                            {
+                              "scale": 1,
+                            },
+                          ],
+                          "writingDirection": "ltr",
+                        }
+                      }
+                      testID="text-input-flat-label-active"
+                    >
+                      Contact No.
+                    </Text>
+                    <Text
+                      collapsable={false}
+                      maxFontSizeMultiplier={1.5}
+                      numberOfLines={1}
+                      style={
+                        {
+                          "color": "rgba(73, 69, 79, 1)",
+                          "fontFamily": "System",
+                          "fontSize": 28,
+                          "fontWeight": undefined,
+                          "left": 0,
+                          "letterSpacing": 0.15,
+                          "lineHeight": undefined,
+                          "maxWidth": 73,
+                          "opacity": 0,
+                          "paddingLeft": 16,
+                          "paddingRight": 16,
+                          "position": "absolute",
+                          "textAlign": "left",
+                          "top": 30,
+                          "transform": [
+                            {
+                              "translateX": 0,
+                            },
+                            {
+                              "translateY": 0,
+                            },
+                            {
+                              "scale": 1,
+                            },
+                          ],
+                          "writingDirection": "ltr",
+                        }
+                      }
+                      testID="text-input-flat-label-inactive"
+                    >
+                      Contact No.
+                    </Text>
+                  </View>
+                  <TextInput
+                    cursorColor="#000000"
+                    editable={true}
+                    keyboardType="numeric"
+                    maxFontSizeMultiplier={1.5}
+                    maxLength={10}
+                    multiline={false}
+                    onBlur={[Function]}
+                    onChangeText={[Function]}
+                    onFocus={[Function]}
+                    outlineColor="#8a8a8a"
+                    placeholder=" "
+                    placeholderTextColor="#8a8a8a"
+                    selectionColor="#000000"
+                    style={
+                      [
+                        {
+                          "margin": 0,
+                        },
+                        {
+                          "height": 56,
+                        },
+                        {
+                          "paddingBottom": 4,
+                          "paddingTop": 24,
+                        },
+                        {
+                          "color": "#000000",
+                          "fontFamily": "System",
+                          "fontSize": 28,
+                          "fontWeight": undefined,
+                          "letterSpacing": 0.15,
+                          "lineHeight": undefined,
+                          "minWidth": 65,
+                          "paddingLeft": 16,
+                          "paddingRight": 16,
+                          "textAlign": "left",
+                          "textAlignVertical": "center",
+                        },
+                        false,
+                        [
+                          {},
+                        ],
+                        undefined,
+                      ]
+                    }
+                    testID="text-input-flat"
+                    underlineColorAndroid="transparent"
+                    value=""
+                  />
+                </View>
+              </View>
+            </View>
+            <View
+              style={
+                {
+                  "flex": 1,
+                }
+              }
+            >
+              <View
+                style={
+                  [
+                    {
+                      "backgroundColor": "rgba(231, 224, 236, 1)",
+                      "borderTopLeftRadius": 4,
+                      "borderTopRightRadius": 4,
+                    },
+                    {
+                      "backgroundColor": "#8a8a8a30",
+                      "fontFamily": "roboto",
+                      "padding": 16,
+                      "width": "100%",
+                    },
+                  ]
+                }
+              >
+                <View
+                  collapsable={false}
+                  style={
+                    {
+                      "backgroundColor": "rgba(73, 69, 79, 1)",
+                      "bottom": 0,
+                      "height": 1,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "transform": [
+                        {
+                          "scaleY": 0.5,
+                        },
+                      ],
+                      "zIndex": 1,
+                    }
+                  }
+                  testID="text-input-underline"
+                />
+                <View
+                  onLayout={[Function]}
+                  style={
+                    [
+                      {
+                        "paddingBottom": 0,
+                        "paddingTop": 0,
+                      },
+                      {
+                        "minHeight": 56,
+                      },
+                    ]
+                  }
+                >
+                  <View
+                    collapsable={false}
+                    pointerEvents="none"
+                    style={
+                      {
+                        "bottom": 0,
+                        "left": 0,
+                        "opacity": 1,
+                        "position": "absolute",
+                        "right": 0,
+                        "top": 0,
+                        "transform": [
+                          {
+                            "translateX": 0,
+                          },
+                        ],
+                        "width": 750,
+                        "zIndex": 3,
+                      }
+                    }
+                  >
+                    <Text
+                      collapsable={false}
+                      maxFontSizeMultiplier={1.5}
+                      numberOfLines={1}
+                      onLayout={[Function]}
+                      onTextLayout={[Function]}
+                      style={
+                        {
+                          "color": "#000000",
+                          "fontFamily": "System",
+                          "fontSize": 28,
+                          "fontWeight": undefined,
+                          "left": 0,
+                          "letterSpacing": 0.15,
+                          "lineHeight": undefined,
+                          "maxWidth": 73,
+                          "opacity": 0,
+                          "paddingLeft": 16,
+                          "paddingRight": 16,
+                          "position": "absolute",
+                          "textAlign": "left",
+                          "top": 30,
+                          "transform": [
+                            {
+                              "translateX": 0,
+                            },
+                            {
+                              "translateY": 0,
+                            },
+                            {
+                              "scale": 1,
+                            },
+                          ],
+                          "writingDirection": "ltr",
+                        }
+                      }
+                      testID="text-input-flat-label-active"
+                    >
+                      Email
+                    </Text>
+                    <Text
+                      collapsable={false}
+                      maxFontSizeMultiplier={1.5}
+                      numberOfLines={1}
+                      style={
+                        {
+                          "color": "rgba(73, 69, 79, 1)",
+                          "fontFamily": "System",
+                          "fontSize": 28,
+                          "fontWeight": undefined,
+                          "left": 0,
+                          "letterSpacing": 0.15,
+                          "lineHeight": undefined,
+                          "maxWidth": 73,
+                          "opacity": 0,
+                          "paddingLeft": 16,
+                          "paddingRight": 16,
+                          "position": "absolute",
+                          "textAlign": "left",
+                          "top": 30,
+                          "transform": [
+                            {
+                              "translateX": 0,
+                            },
+                            {
+                              "translateY": 0,
+                            },
+                            {
+                              "scale": 1,
+                            },
+                          ],
+                          "writingDirection": "ltr",
+                        }
+                      }
+                      testID="text-input-flat-label-inactive"
+                    >
+                      Email
+                    </Text>
+                  </View>
+                  <TextInput
+                    cursorColor="#000000"
+                    editable={true}
+                    maxFontSizeMultiplier={1.5}
+                    maxLength={25}
+                    multiline={false}
+                    onBlur={[Function]}
+                    onChangeText={[Function]}
+                    onFocus={[Function]}
+                    outlineColor="#8a8a8a"
+                    placeholder=" "
+                    placeholderTextColor="#8a8a8a"
+                    selectionColor="#000000"
+                    style={
+                      [
+                        {
+                          "margin": 0,
+                        },
+                        {
+                          "height": 56,
+                        },
+                        {
+                          "paddingBottom": 4,
+                          "paddingTop": 24,
+                        },
+                        {
+                          "color": "#000000",
+                          "fontFamily": "System",
+                          "fontSize": 28,
+                          "fontWeight": undefined,
+                          "letterSpacing": 0.15,
+                          "lineHeight": undefined,
+                          "minWidth": 65,
+                          "paddingLeft": 16,
+                          "paddingRight": 16,
+                          "textAlign": "left",
+                          "textAlignVertical": "center",
+                        },
+                        false,
+                        [
+                          {},
+                        ],
+                        undefined,
+                      ]
+                    }
+                    testID="text-input-flat"
+                    underlineColorAndroid="transparent"
+                    value=""
+                  />
+                </View>
+              </View>
+            </View>
+          </View>
+          <View
+            accessibilityState={
+              {
+                "busy": undefined,
+                "checked": undefined,
+                "disabled": false,
+                "expanded": undefined,
+                "selected": undefined,
+              }
+            }
+            accessibilityValue={
+              {
+                "max": undefined,
+                "min": undefined,
+                "now": undefined,
+                "text": undefined,
+              }
+            }
+            accessible={true}
+            collapsable={false}
+            focusable={true}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              [
+                false,
+                {
+                  "backgroundColor": "#0000ff",
+                  "padding": 32,
+                },
+              ]
+            }
+          >
+            <Text
+              color="#ffffff"
+              style={
+                [
+                  {
+                    "color": "#ffffff",
+                    "fontFamily": "roboto",
+                    "fontSize": 28,
+                  },
+                  {
+                    "textAlign": "center",
+                  },
+                ]
+              }
+            >
+              Validate form
+            </Text>
+          </View>
+        </View>
+      </View>
+    </RCTSafeAreaView>
   </View>
-</RCTSafeAreaView>
+</RCTScrollView>
 `;

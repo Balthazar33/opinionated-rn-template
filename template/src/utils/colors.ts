@@ -4,6 +4,7 @@ export enum Colors {
   PRIMARY_RED = '#ff0000',
   PRIMARY_BLUE = '#0000ff',
   PRIMARY_GREEN = '#00ff00',
+  GREY = '#8a8a8a',
   TRANSPARENT = 'transparent',
 }
 

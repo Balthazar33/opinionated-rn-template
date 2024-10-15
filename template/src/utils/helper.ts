@@ -13,3 +13,6 @@ export const isNetworkError = (error: any) => {
       .includes(Strings.networkRequestFailed)
   );
 };
+
+export const isArray = (value: any) =>
+  Object.prototype.toString.call(value) === '[object Array]';

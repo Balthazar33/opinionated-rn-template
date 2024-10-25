@@ -1,6 +1,8 @@
-# Opinionated RN template
+# Opinionated RN template (RN version 0.74.5)
 
 [![Balthazar33](https://circleci.com/gh/Balthazar33/opinionated-rn-template.svg?style=svg)](https://app.circleci.com/pipelines/github/Balthazar33/opinionated-rn-template)
+
+
 
 ## 🏁 Getting started
 Run the following command in a termial to create a new React Native app with this template:

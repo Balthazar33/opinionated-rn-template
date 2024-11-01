@@ -1,6 +1,8 @@
-# Opinionated RN template
+# Opinionated RN template (RN version 0.74.5)
 
 [![Balthazar33](https://circleci.com/gh/Balthazar33/opinionated-rn-template.svg?style=svg)](https://app.circleci.com/pipelines/github/Balthazar33/opinionated-rn-template)
+
+
 
 ## 🏁 Getting started
 Run the following command in a termial to create a new React Native app with this template:
@@ -55,6 +57,9 @@ const {value} = useAppSelector(state => state.sliceName);
 **RTK Query** has been configured to make API calls. Navigate to `src/services/testApi` and refer the sample api. A helper method to make API calls with error handling has been added in `src/services/apiCaller.ts` file. Learn more about RTK Query [here.](https://redux-toolkit.js.org/rtk-query/overview)
 
 *(To see how RTK Query works with GraphQL, switch to the **feat/graphQL** branch)*
+
+## ➡️ Navigation
+A Stack navigator has been implemented with **@react-navigation/native** and **@react-navigation/stack**, located at `navigation/AppNavigator.tsx` with the types for the same added in `navigation/types.ts`.
 
 ## 📱 Splash Screen
 `react-native-bootsplash` is used in this template to control the splash screen behavior and appearance. To display a custom icon on the splash screen, replace the `logo.png` image with your custom image in the `assets` folder at the project root and run

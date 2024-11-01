@@ -58,6 +58,9 @@ const {value} = useAppSelector(state => state.sliceName);
 
 *(To see how RTK Query works with GraphQL, switch to the **feat/graphQL** branch)*
 
+## ➡️ Navigation
+A Stack navigator has been implemented with **@react-navigation/native** and **@react-navigation/stack**, located at `navigation/AppNavigator.tsx` with the types for the same added in `navigation/types.ts`.
+
 ## 📱 Splash Screen
 `react-native-bootsplash` is used in this template to control the splash screen behavior and appearance. To display a custom icon on the splash screen, replace the `logo.png` image with your custom image in the `assets` folder at the project root and run
 ```bash

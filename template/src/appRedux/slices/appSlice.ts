@@ -1,4 +1,4 @@
-import {createSlice} from '@reduxjs/toolkit';
+import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 import {resetAll} from '../appActions';
 
 const initialState = {
@@ -10,7 +10,7 @@ const appSlice = createSlice({
   name: 'app',
   initialState,
   reducers: {
-    setLoading: (state, {payload}) => {
+    setLoading: (state, {payload}: PayloadAction<boolean>) => {
       state.loading = payload;
     },
   },

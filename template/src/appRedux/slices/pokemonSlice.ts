@@ -1,4 +1,4 @@
-import {createSlice} from '@reduxjs/toolkit';
+import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 import {resetAll} from '../appActions';
 import {PokemonItemType} from '../../screens/ApiCallScreen/ApiCallScreen.types';
 
@@ -24,10 +24,10 @@ const pokemonSlice = createSlice({
   name: 'pokemon',
   initialState,
   reducers: {
-    setAll: (state, {payload}) => {
+    setAll: (state, {payload}: PayloadAction<PokemonItemType[]>) => {
       state.all = payload;
     },
-    setPokemonDetails: (state, {payload}) => {
+    setPokemonDetails: (state, {payload}: PayloadAction<PokemonItemType>) => {
       state.currentPokemon = payload;
     },
     clearCurrent: state => {

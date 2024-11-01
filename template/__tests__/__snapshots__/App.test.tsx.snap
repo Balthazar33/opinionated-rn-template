@@ -38,7 +38,7 @@ exports[`App renders correctly 1`] = `
           }
         }
       >
-        <RNSModalScreen
+        <RNSScreen
           activityState={2}
           collapsable={false}
           gestureResponseDistance={
@@ -1054,7 +1054,7 @@ exports[`App renders correctly 1`] = `
               </View>
             </View>
           </View>
-        </RNSModalScreen>
+        </RNSScreen>
       </RNSScreenContainer>
       <View
         collapsable={false}

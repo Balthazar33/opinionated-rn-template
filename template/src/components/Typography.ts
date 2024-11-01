@@ -8,7 +8,7 @@ interface ColorProps {
   color?: string;
 }
 
-const getColor = ({color}: ColorProps) => (color ? color : Colors.BLACK);
+const getColor = ({color}: ColorProps) => (color ?? Colors.BLACK);
 
 // Regular text--------------------------------------
 export const TextRegular10 = styled.Text<ColorProps>`

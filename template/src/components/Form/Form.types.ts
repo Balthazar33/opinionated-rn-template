@@ -24,6 +24,7 @@ export interface FormElementProps
     | 'editable'
     | 'multiline'
     | 'maxLength'
+    | 'placeholder'
     | 'onChangeText'
     | 'numberOfLines'
     | 'accessibilityHint'
@@ -36,7 +37,6 @@ export interface FormElementProps
   leftIcon?: string;
   rightIcon?: string;
   iconColor?: string;
-  placeholder?: string;
   onFocus?: () => void;
   mode?: TextInputModes;
   errorMessage?: string;
@@ -48,8 +48,20 @@ export interface FormElementProps
 }
 
 export interface FormProps {
+  /**
+   * Array of key-value pairs where the key is the field identifier,
+   * and the value is the state variable for the field.
+   * Eg., [{ username: usernameStateVariable }]
+   */
   formData: {[x: string]: any};
+  /**
+   * The schema for the form.
+   */
   schema: ObjectSchema<{[x: string]: any}>;
+  /**
+   * Props for the form text elements. Can either be a single object
+   * or an array of objects.
+   */
   formElementProps: (FormElementProps | FormElementProps[])[];
 }
 

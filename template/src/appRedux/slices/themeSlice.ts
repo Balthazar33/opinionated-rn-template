@@ -1,4 +1,4 @@
-import {createSlice} from '@reduxjs/toolkit';
+import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 import {resetAll} from '../appActions';
 
 export enum THEMES {
@@ -13,7 +13,7 @@ const themeSlice = createSlice({
   name: 'theme',
   initialState,
   reducers: {
-    setTheme: (state, {payload}) => {
+    setTheme: (state, {payload}: PayloadAction<THEMES>) => {
       state.currentTheme = payload;
     },
   },

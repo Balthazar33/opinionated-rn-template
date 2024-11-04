@@ -78,6 +78,7 @@
     "patch-package": "^8.0.0",
     "prettier": "2.8.8",
     "react-test-renderer": "18.3.1",
+    "rnx-gen": "^1.0.2",
     "typescript": "5.0.4"
   },
   "engines": {

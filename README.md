@@ -157,6 +157,8 @@ const handleValidate = () => {
 ## 💻DX
 - `eslint-plugin-unicorn` 
 Integrated for extending ESLint rules. [Learn more](https://github.com/sindresorhus/eslint-plugin-unicorn)
+- `rnx-gen` 
+Integrated for generating common resources (screens, components, hooks, redux files) with a single command. [Learn more](https://www.npmjs.com/package/rnx-gen)
 - `babel-plugin-module-resolver`
 Integrated for supporting absolute paths. [Learn more](https://www.npmjs.com/package/babel-plugin-module-resolver)
 - `@commitlint/config-conventional`

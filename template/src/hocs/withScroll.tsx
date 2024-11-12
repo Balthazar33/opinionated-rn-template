@@ -1,25 +1,15 @@
 import React, {ElementType} from 'react';
-import {StyleProp, ViewStyle} from 'react-native';
-
-import {
-  KeyboardAwareScrollView,
-  KeyboardAwareScrollViewProps,
-} from 'react-native-keyboard-aware-scroll-view';
+import {ScrollViewProps} from 'react-native';
 
 import {commonStyles} from '@utils/common-styles';
 import {BaseScreenProps} from '../containers/BaseScreen';
-
-export interface KeyboardAwareScrollViewCustomProps {
-  keyboardShouldPersistTaps: 'always' | 'handled' | undefined;
-  contentContainerStyle: StyleProp<ViewStyle>;
-}
+import {KeyboardAwareScrollView, KeyboardAwareScrollViewProps} from 'react-native-keyboard-controller';
 
 export interface ScrollableScreenProps extends BaseScreenProps {
   scrollViewProps?: KeyboardAwareScrollViewProps;
 }
 
-// default props for keyboard-aware scrollview
-export const defaultScrollViewProps: KeyboardAwareScrollViewCustomProps = {
+export const defaultScrollViewProps: Partial<ScrollViewProps> = {
   keyboardShouldPersistTaps: 'always',
   contentContainerStyle: commonStyles.flexGrow1,
 };

@@ -51,7 +51,7 @@ module.exports = {
       '|@react-native-async-storage/async-storage' +
       '|@react-native-community/netinfo' +
       '|react-native-error-boundary' +
-      '|react-native-keyboard-aware-scroll-view' +
+      '|react-native-keyboard-controller' +
       '|react-native-mmkv-storage' +
       '|yup' +
       ')/)',

@@ -12,6 +12,7 @@ import {Provider} from 'react-redux';
 import SplashScreen from 'react-native-bootsplash';
 import ErrorBoundary from 'react-native-error-boundary';
 import {PersistGate} from 'redux-persist/integration/react';
+import { KeyboardProvider } from 'react-native-keyboard-controller';
 
 import {Colors} from './src/utils/colors';
 import {ErrorFallback} from './src/components';
@@ -39,7 +40,9 @@ function App(): React.JSX.Element {
         }
         persistor={persistor}>
         <ErrorBoundary FallbackComponent={ErrorFallback}>
+        <KeyboardProvider>
           <AppContainer />
+        </KeyboardProvider>
         </ErrorBoundary>
       </PersistGate>
     </Provider>

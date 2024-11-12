@@ -44,11 +44,10 @@ jest.mock('react-native-reanimated', () =>
   require('react-native-reanimated/mock'),
 );
 
-// react-native-keyboard-aware-scroll-view'
-jest.mock('react-native-keyboard-aware-scroll-view', () => {
-  const KeyboardAwareScrollView = require('react-native').ScrollView;
-  return {KeyboardAwareScrollView};
-});
+// react-native-keyboard-controller
+jest.mock('react-native-keyboard-controller', () =>
+  require('react-native-keyboard-controller/jest'),
+);
 
 // @react-navigation/native
 jest.mock('@react-navigation/native/lib/commonjs/useLinking.native', () => ({

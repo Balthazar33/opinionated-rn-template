@@ -70,6 +70,7 @@ export const useDummyScreen = () => {
           fieldName: Strings.email,
           placeholder: '',
           type: FormElementTypes.TEXT_INPUT,
+          numberOfLines: 1,
           style: {
             padding: sizer(8),
           },

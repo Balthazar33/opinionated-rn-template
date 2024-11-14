@@ -4,7 +4,7 @@ import {StyleSheet} from 'react-native';
 import BaseScreen from '../../containers/BaseScreen';
 import {sizer} from '@utils/metrics';
 import {SCREEN_PADDING} from '@utils/constants';
-import {useGetDetailsByNameMutation} from '@services/testApi/pokemonApi';
+import {useLazyGetDetailsByNameQuery} from '@services/testApi/pokemonApi';
 import {useAppDispatch, useAppSelector} from '@redux/store.utils';
 import {getDetails} from './PokemonDetailScreen.utils';
 import {clearCurrent} from '@redux/slices/pokemonSlice';
@@ -13,19 +13,19 @@ import {TextRegular10, TextRegular12} from '@components/Typography';
 
 export const PokemonDetailScreen = ({route}: PokemonDetailScreenProps) => {
   const {name} = route?.params || {};
-  const [pokemonDetails] = useGetDetailsByNameMutation();
+  const [trigger] = useLazyGetDetailsByNameQuery();
   const {currentPokemon} = useAppSelector(state => state.pokemon) || {};
   const dispatch = useAppDispatch();
 
   useEffect(() => {
     if (name) {
-      getDetails({apiCall: pokemonDetails, params: {name}, dispatch});
+      getDetails({apiCall: trigger, params: {name}, dispatch});
     }
 
     return () => {
       dispatch(clearCurrent());
     };
-  }, [name, dispatch, pokemonDetails]);
+  }, [trigger, dispatch, name]);
 
   return (
     <BaseScreen style={style.screenStyle}>

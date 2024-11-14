@@ -25,7 +25,7 @@ export const pokemonApi = createApi({
       transformResponse: (response, meta, _) => ({data: response, meta}),
     }),
     // Get pokemon details by name
-    getDetailsByName: builder.mutation({
+    getDetailsByName: builder.query({
       query: ({name}) => ({
         url: `${Endpoints.ALL}${name}`,
         method: FetchMethods.GET,
@@ -46,6 +46,6 @@ export const pokemonApi = createApi({
 
 export const {
   useLazyGetAllPokemonQuery,
-  useGetDetailsByNameMutation,
+  useLazyGetDetailsByNameQuery,
   useAddPokemonByNameMutation,
 } = pokemonApi;

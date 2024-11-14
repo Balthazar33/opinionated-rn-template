@@ -3,21 +3,21 @@ import {AppDispatch} from '@redux/store.utils';
 import {callApi} from '@services/apiCaller';
 import {PokemonItemType} from './ApiCallScreen.types';
 
-interface ApiCallParameters {
+interface ApiCallParameters<T> {
   dispatch: AppDispatch;
   apiCall: (params: any) => any;
-  params: any;
+  params: T;
 }
 
-interface PokemonResponse {
+export interface PokemonResponse {
   results: PokemonItemType[];
 }
 
-export const getAllPokemon = async ({
+export const getAllPokemon = async <T>({
   dispatch,
   apiCall,
   params,
-}: ApiCallParameters) => {
+}: ApiCallParameters<T>) => {
   try {
     const response = await callApi({
       params,

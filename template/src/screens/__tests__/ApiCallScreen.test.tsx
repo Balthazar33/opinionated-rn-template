@@ -64,7 +64,7 @@ describe('ApiCallScreen', () => {
   });
 
   it('should fetch the list of pokemons on pressing the "Get all pokemon" button', async () => {
-    const getAllSpyFn = jest.spyOn(PokeApi, 'useGetAllPokemonMutation');
+    const getAllSpyFn = jest.spyOn(PokeApi, 'useLazyGetAllPokemonQuery');
     renderWithProviders(
       <ApiCallScreen
         route={route as ApiCallScreenProps['route']}

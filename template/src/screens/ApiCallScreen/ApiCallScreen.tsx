@@ -5,7 +5,7 @@ import {TouchableRipple} from 'react-native-paper';
 
 import BaseScreen from '../../containers/BaseScreen';
 import {useAppDispatch, useAppSelector} from '@redux/store.utils';
-import {useGetAllPokemonMutation} from '../../services/testApi/pokemonApi';
+import {GetAllPokemonQueryParams, useLazyGetAllPokemonQuery} from '@services/testApi/pokemonApi';
 import {getAllPokemon} from './ApiCallScreen.utils';
 import {ApiCallScreenProps, PokemonItemType} from './ApiCallScreen.types';
 import {sizer} from '@utils/metrics';
@@ -19,12 +19,11 @@ export const ApiCallScreen = ({navigation}: ApiCallScreenProps) => {
   const dispatch = useAppDispatch();
   const {all}: {all: PokemonItemType[]} =
     useAppSelector(state => state.pokemon) || {};
-  // extract api call from mutation
-  const [pokemonApi] = useGetAllPokemonMutation();
+  const [trigger] = useLazyGetAllPokemonQuery();
 
   // getter & setter
-  const handleBtnPress = () => {
-    getAllPokemon({apiCall: pokemonApi, params: {}, dispatch});
+  const handleBtnPress = async () => {
+    getAllPokemon<GetAllPokemonQueryParams>({dispatch, apiCall: trigger, params: {limit: 5}});
   };
 
   const renderItem = useCallback(

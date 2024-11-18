@@ -1,22 +1,31 @@
 import {createApi, fetchBaseQuery} from '@reduxjs/toolkit/query/react';
 import {Endpoints} from './pokemonApi.endpoints';
 import {FetchMethods} from '../constants';
+import {CommonResponse} from '../types';
 export const BASE_URL = 'https://pokeapi.co/api/v2/';
+
+export interface GetAllPokemonQueryParams {
+  limit?: number;
+}
 
 export const pokemonApi = createApi({
   reducerPath: 'pokeApi',
   baseQuery: fetchBaseQuery({baseUrl: BASE_URL}),
   endpoints: builder => ({
     // Get all pokemons
-    getAllPokemon: builder.mutation({
-      query: () => ({
+    getAllPokemon: builder.query<CommonResponse, GetAllPokemonQueryParams>({
+      query: (params) => ({
         url: Endpoints.ALL,
         method: FetchMethods.GET,
+        params: {
+          ...params,
+          limit: params?.limit ?? 10,
+        },
       }),
       transformResponse: (response, meta, _) => ({data: response, meta}),
     }),
     // Get pokemon details by name
-    getDetailsByName: builder.mutation({
+    getDetailsByName: builder.query({
       query: ({name}) => ({
         url: `${Endpoints.ALL}${name}`,
         method: FetchMethods.GET,
@@ -36,7 +45,7 @@ export const pokemonApi = createApi({
 });
 
 export const {
-  useGetAllPokemonMutation,
-  useGetDetailsByNameMutation,
+  useLazyGetAllPokemonQuery,
+  useLazyGetDetailsByNameQuery,
   useAddPokemonByNameMutation,
 } = pokemonApi;

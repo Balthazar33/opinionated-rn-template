@@ -64,6 +64,7 @@ exports[`App renders correctly 1`] = `
                 "position": "absolute",
                 "right": 0,
                 "top": 0,
+                "zIndex": undefined,
               }
             }
           >
@@ -142,6 +143,7 @@ exports[`App renders correctly 1`] = `
               >
                 <View
                   collapsable={false}
+                  enabled={false}
                   handlerTag={1}
                   handlerType="PanGestureHandler"
                   needsOffscreenAlphaCompositing={false}
@@ -394,6 +396,7 @@ exports[`App renders correctly 1`] = `
                                         style={
                                           [
                                             {
+                                              "flexGrow": 1,
                                               "paddingBottom": 0,
                                               "paddingTop": 0,
                                             },
@@ -404,104 +407,130 @@ exports[`App renders correctly 1`] = `
                                         }
                                       >
                                         <View
-                                          collapsable={false}
                                           pointerEvents="none"
                                           style={
-                                            {
-                                              "bottom": 0,
-                                              "left": 0,
-                                              "opacity": 1,
-                                              "position": "absolute",
-                                              "right": 0,
-                                              "top": 0,
-                                              "transform": [
-                                                {
-                                                  "translateX": 0,
-                                                },
-                                              ],
-                                              "width": 750,
-                                              "zIndex": 3,
-                                            }
+                                            [
+                                              {
+                                                "bottom": 0,
+                                                "left": 0,
+                                                "position": "absolute",
+                                                "right": 0,
+                                                "top": 0,
+                                              },
+                                              {
+                                                "overflow": "hidden",
+                                              },
+                                            ]
                                           }
                                         >
-                                          <Text
+                                          <View
                                             collapsable={false}
-                                            maxFontSizeMultiplier={1.5}
-                                            numberOfLines={1}
-                                            onLayout={[Function]}
-                                            onTextLayout={[Function]}
+                                            pointerEvents="none"
                                             style={
                                               {
-                                                "color": "#000000",
-                                                "fontFamily": "System",
-                                                "fontSize": 28,
-                                                "fontWeight": undefined,
+                                                "bottom": 0,
                                                 "left": 0,
-                                                "letterSpacing": 0.15,
-                                                "lineHeight": undefined,
-                                                "maxWidth": 73,
-                                                "opacity": 0,
-                                                "paddingLeft": 16,
-                                                "paddingRight": 16,
+                                                "opacity": 1,
                                                 "position": "absolute",
-                                                "textAlign": "left",
-                                                "top": 30,
+                                                "right": 0,
+                                                "top": 0,
                                                 "transform": [
                                                   {
                                                     "translateX": 0,
                                                   },
-                                                  {
-                                                    "translateY": 0,
-                                                  },
-                                                  {
-                                                    "scale": 1,
-                                                  },
                                                 ],
-                                                "writingDirection": "ltr",
+                                                "width": 750,
+                                                "zIndex": 3,
                                               }
                                             }
-                                            testID="text-input-flat-label-active"
                                           >
-                                            Username
-                                          </Text>
-                                          <Text
-                                            collapsable={false}
-                                            maxFontSizeMultiplier={1.5}
-                                            numberOfLines={1}
-                                            style={
-                                              {
-                                                "color": "rgba(73, 69, 79, 1)",
-                                                "fontFamily": "System",
-                                                "fontSize": 28,
-                                                "fontWeight": undefined,
-                                                "left": 0,
-                                                "letterSpacing": 0.15,
-                                                "lineHeight": undefined,
-                                                "maxWidth": 73,
-                                                "opacity": 0,
-                                                "paddingLeft": 16,
-                                                "paddingRight": 16,
-                                                "position": "absolute",
-                                                "textAlign": "left",
-                                                "top": 30,
-                                                "transform": [
-                                                  {
-                                                    "translateX": 0,
-                                                  },
-                                                  {
-                                                    "translateY": 0,
-                                                  },
-                                                  {
-                                                    "scale": 1,
-                                                  },
-                                                ],
-                                                "writingDirection": "ltr",
+                                            <View
+                                              style={
+                                                {
+                                                  "width": 73,
+                                                }
                                               }
-                                            }
-                                            testID="text-input-flat-label-inactive"
-                                          >
-                                            Username
-                                          </Text>
+                                            >
+                                              <Text
+                                                collapsable={false}
+                                                maxFontSizeMultiplier={1.5}
+                                                numberOfLines={1}
+                                                onLayout={[Function]}
+                                                onTextLayout={[Function]}
+                                                style={
+                                                  {
+                                                    "color": "#000000",
+                                                    "fontFamily": "System",
+                                                    "fontSize": 28,
+                                                    "fontWeight": undefined,
+                                                    "left": 0,
+                                                    "letterSpacing": 0.15,
+                                                    "lineHeight": undefined,
+                                                    "maxWidth": 73,
+                                                    "opacity": 0,
+                                                    "paddingLeft": 16,
+                                                    "paddingRight": 16,
+                                                    "position": "absolute",
+                                                    "textAlign": "left",
+                                                    "top": 30,
+                                                    "transform": [
+                                                      {
+                                                        "translateX": 0,
+                                                      },
+                                                      {
+                                                        "translateY": 0,
+                                                      },
+                                                      {
+                                                        "scale": 1,
+                                                      },
+                                                    ],
+                                                    "writingDirection": "ltr",
+                                                  }
+                                                }
+                                                testID="text-input-flat-label-active"
+                                              >
+                                                Username
+                                              </Text>
+                                              <Text
+                                                collapsable={false}
+                                                maxFontSizeMultiplier={1.5}
+                                                numberOfLines={1}
+                                                style={
+                                                  {
+                                                    "color": "rgba(73, 69, 79, 1)",
+                                                    "fontFamily": "System",
+                                                    "fontSize": 28,
+                                                    "fontWeight": undefined,
+                                                    "left": 0,
+                                                    "letterSpacing": 0.15,
+                                                    "lineHeight": undefined,
+                                                    "maxWidth": 73,
+                                                    "opacity": 0,
+                                                    "paddingLeft": 16,
+                                                    "paddingRight": 16,
+                                                    "position": "absolute",
+                                                    "textAlign": "left",
+                                                    "top": 30,
+                                                    "transform": [
+                                                      {
+                                                        "translateX": 0,
+                                                      },
+                                                      {
+                                                        "translateY": 0,
+                                                      },
+                                                      {
+                                                        "scale": 1,
+                                                      },
+                                                    ],
+                                                    "writingDirection": "ltr",
+                                                  }
+                                                }
+                                                testID="text-input-flat-label-inactive"
+                                              >
+                                                Username
+                                              </Text>
+                                            </View>
+                                          </View>
                                         </View>
                                         <TextInput
                                           cursorColor="#000000"
@@ -519,11 +548,10 @@ exports[`App renders correctly 1`] = `
                                           style={
                                             [
                                               {
+                                                "flexGrow": 1,
                                                 "margin": 0,
                                               },
-                                              {
-                                                "height": 56,
-                                              },
+                                              {},
                                               {
                                                 "paddingBottom": 4,
                                                 "paddingTop": 24,
@@ -613,6 +641,7 @@ exports[`App renders correctly 1`] = `
                                           style={
                                             [
                                               {
+                                                "flexGrow": 1,
                                                 "paddingBottom": 0,
                                                 "paddingTop": 0,
                                               },
@@ -623,104 +652,130 @@ exports[`App renders correctly 1`] = `
                                           }
                                         >
                                           <View
-                                            collapsable={false}
                                             pointerEvents="none"
                                             style={
-                                              {
-                                                "bottom": 0,
-                                                "left": 0,
-                                                "opacity": 1,
-                                                "position": "absolute",
-                                                "right": 0,
-                                                "top": 0,
-                                                "transform": [
-                                                  {
-                                                    "translateX": 0,
-                                                  },
-                                                ],
-                                                "width": 750,
-                                                "zIndex": 3,
-                                              }
+                                              [
+                                                {
+                                                  "bottom": 0,
+                                                  "left": 0,
+                                                  "position": "absolute",
+                                                  "right": 0,
+                                                  "top": 0,
+                                                },
+                                                {
+                                                  "overflow": "hidden",
+                                                },
+                                              ]
                                             }
                                           >
-                                            <Text
+                                            <View
                                               collapsable={false}
-                                              maxFontSizeMultiplier={1.5}
-                                              numberOfLines={1}
-                                              onLayout={[Function]}
-                                              onTextLayout={[Function]}
+                                              pointerEvents="none"
                                               style={
                                                 {
-                                                  "color": "#000000",
-                                                  "fontFamily": "System",
-                                                  "fontSize": 28,
-                                                  "fontWeight": undefined,
+                                                  "bottom": 0,
                                                   "left": 0,
-                                                  "letterSpacing": 0.15,
-                                                  "lineHeight": undefined,
-                                                  "maxWidth": 73,
-                                                  "opacity": 0,
-                                                  "paddingLeft": 16,
-                                                  "paddingRight": 16,
+                                                  "opacity": 1,
                                                   "position": "absolute",
-                                                  "textAlign": "left",
-                                                  "top": 30,
+                                                  "right": 0,
+                                                  "top": 0,
                                                   "transform": [
                                                     {
                                                       "translateX": 0,
                                                     },
-                                                    {
-                                                      "translateY": 0,
-                                                    },
-                                                    {
-                                                      "scale": 1,
-                                                    },
                                                   ],
-                                                  "writingDirection": "ltr",
+                                                  "width": 750,
+                                                  "zIndex": 3,
                                                 }
                                               }
-                                              testID="text-input-flat-label-active"
                                             >
-                                              Contact No.
-                                            </Text>
-                                            <Text
-                                              collapsable={false}
-                                              maxFontSizeMultiplier={1.5}
-                                              numberOfLines={1}
-                                              style={
-                                                {
-                                                  "color": "rgba(73, 69, 79, 1)",
-                                                  "fontFamily": "System",
-                                                  "fontSize": 28,
-                                                  "fontWeight": undefined,
-                                                  "left": 0,
-                                                  "letterSpacing": 0.15,
-                                                  "lineHeight": undefined,
-                                                  "maxWidth": 73,
-                                                  "opacity": 0,
-                                                  "paddingLeft": 16,
-                                                  "paddingRight": 16,
-                                                  "position": "absolute",
-                                                  "textAlign": "left",
-                                                  "top": 30,
-                                                  "transform": [
-                                                    {
-                                                      "translateX": 0,
-                                                    },
-                                                    {
-                                                      "translateY": 0,
-                                                    },
-                                                    {
-                                                      "scale": 1,
-                                                    },
-                                                  ],
-                                                  "writingDirection": "ltr",
+                                              <View
+                                                style={
+                                                  {
+                                                    "width": 73,
+                                                  }
                                                 }
-                                              }
-                                              testID="text-input-flat-label-inactive"
-                                            >
-                                              Contact No.
-                                            </Text>
+                                              >
+                                                <Text
+                                                  collapsable={false}
+                                                  maxFontSizeMultiplier={1.5}
+                                                  numberOfLines={1}
+                                                  onLayout={[Function]}
+                                                  onTextLayout={[Function]}
+                                                  style={
+                                                    {
+                                                      "color": "#000000",
+                                                      "fontFamily": "System",
+                                                      "fontSize": 28,
+                                                      "fontWeight": undefined,
+                                                      "left": 0,
+                                                      "letterSpacing": 0.15,
+                                                      "lineHeight": undefined,
+                                                      "maxWidth": 73,
+                                                      "opacity": 0,
+                                                      "paddingLeft": 16,
+                                                      "paddingRight": 16,
+                                                      "position": "absolute",
+                                                      "textAlign": "left",
+                                                      "top": 30,
+                                                      "transform": [
+                                                        {
+                                                          "translateX": 0,
+                                                        },
+                                                        {
+                                                          "translateY": 0,
+                                                        },
+                                                        {
+                                                          "scale": 1,
+                                                        },
+                                                      ],
+                                                      "writingDirection": "ltr",
+                                                    }
+                                                  }
+                                                  testID="text-input-flat-label-active"
+                                                >
+                                                  Contact No.
+                                                </Text>
+                                                <Text
+                                                  collapsable={false}
+                                                  maxFontSizeMultiplier={1.5}
+                                                  numberOfLines={1}
+                                                  style={
+                                                    {
+                                                      "color": "rgba(73, 69, 79, 1)",
+                                                      "fontFamily": "System",
+                                                      "fontSize": 28,
+                                                      "fontWeight": undefined,
+                                                      "left": 0,
+                                                      "letterSpacing": 0.15,
+                                                      "lineHeight": undefined,
+                                                      "maxWidth": 73,
+                                                      "opacity": 0,
+                                                      "paddingLeft": 16,
+                                                      "paddingRight": 16,
+                                                      "position": "absolute",
+                                                      "textAlign": "left",
+                                                      "top": 30,
+                                                      "transform": [
+                                                        {
+                                                          "translateX": 0,
+                                                        },
+                                                        {
+                                                          "translateY": 0,
+                                                        },
+                                                        {
+                                                          "scale": 1,
+                                                        },
+                                                      ],
+                                                      "writingDirection": "ltr",
+                                                    }
+                                                  }
+                                                  testID="text-input-flat-label-inactive"
+                                                >
+                                                  Contact No.
+                                                </Text>
+                                              </View>
+                                            </View>
                                           </View>
                                           <TextInput
                                             cursorColor="#000000"
@@ -739,11 +794,10 @@ exports[`App renders correctly 1`] = `
                                             style={
                                               [
                                                 {
+                                                  "flexGrow": 1,
                                                   "margin": 0,
                                                 },
-                                                {
-                                                  "height": 56,
-                                                },
+                                                {},
                                                 {
                                                   "paddingBottom": 4,
                                                   "paddingTop": 24,
@@ -824,6 +878,7 @@ exports[`App renders correctly 1`] = `
                                           style={
                                             [
                                               {
+                                                "flexGrow": 1,
                                                 "paddingBottom": 0,
                                                 "paddingTop": 0,
                                               },
@@ -834,104 +889,130 @@ exports[`App renders correctly 1`] = `
                                           }
                                         >
                                           <View
-                                            collapsable={false}
                                             pointerEvents="none"
                                             style={
-                                              {
-                                                "bottom": 0,
-                                                "left": 0,
-                                                "opacity": 1,
-                                                "position": "absolute",
-                                                "right": 0,
-                                                "top": 0,
-                                                "transform": [
-                                                  {
-                                                    "translateX": 0,
-                                                  },
-                                                ],
-                                                "width": 750,
-                                                "zIndex": 3,
-                                              }
+                                              [
+                                                {
+                                                  "bottom": 0,
+                                                  "left": 0,
+                                                  "position": "absolute",
+                                                  "right": 0,
+                                                  "top": 0,
+                                                },
+                                                {
+                                                  "overflow": "hidden",
+                                                },
+                                              ]
                                             }
                                           >
-                                            <Text
+                                            <View
                                               collapsable={false}
-                                              maxFontSizeMultiplier={1.5}
-                                              numberOfLines={1}
-                                              onLayout={[Function]}
-                                              onTextLayout={[Function]}
+                                              pointerEvents="none"
                                               style={
                                                 {
-                                                  "color": "#000000",
-                                                  "fontFamily": "System",
-                                                  "fontSize": 28,
-                                                  "fontWeight": undefined,
+                                                  "bottom": 0,
                                                   "left": 0,
-                                                  "letterSpacing": 0.15,
-                                                  "lineHeight": undefined,
-                                                  "maxWidth": 73,
-                                                  "opacity": 0,
-                                                  "paddingLeft": 16,
-                                                  "paddingRight": 16,
+                                                  "opacity": 1,
                                                   "position": "absolute",
-                                                  "textAlign": "left",
-                                                  "top": 30,
+                                                  "right": 0,
+                                                  "top": 0,
                                                   "transform": [
                                                     {
                                                       "translateX": 0,
                                                     },
-                                                    {
-                                                      "translateY": 0,
-                                                    },
-                                                    {
-                                                      "scale": 1,
-                                                    },
                                                   ],
-                                                  "writingDirection": "ltr",
+                                                  "width": 750,
+                                                  "zIndex": 3,
                                                 }
                                               }
-                                              testID="text-input-flat-label-active"
                                             >
-                                              Email
-                                            </Text>
-                                            <Text
-                                              collapsable={false}
-                                              maxFontSizeMultiplier={1.5}
-                                              numberOfLines={1}
-                                              style={
-                                                {
-                                                  "color": "rgba(73, 69, 79, 1)",
-                                                  "fontFamily": "System",
-                                                  "fontSize": 28,
-                                                  "fontWeight": undefined,
-                                                  "left": 0,
-                                                  "letterSpacing": 0.15,
-                                                  "lineHeight": undefined,
-                                                  "maxWidth": 73,
-                                                  "opacity": 0,
-                                                  "paddingLeft": 16,
-                                                  "paddingRight": 16,
-                                                  "position": "absolute",
-                                                  "textAlign": "left",
-                                                  "top": 30,
-                                                  "transform": [
-                                                    {
-                                                      "translateX": 0,
-                                                    },
-                                                    {
-                                                      "translateY": 0,
-                                                    },
-                                                    {
-                                                      "scale": 1,
-                                                    },
-                                                  ],
-                                                  "writingDirection": "ltr",
+                                              <View
+                                                style={
+                                                  {
+                                                    "width": 73,
+                                                  }
                                                 }
-                                              }
-                                              testID="text-input-flat-label-inactive"
-                                            >
-                                              Email
-                                            </Text>
+                                              >
+                                                <Text
+                                                  collapsable={false}
+                                                  maxFontSizeMultiplier={1.5}
+                                                  numberOfLines={1}
+                                                  onLayout={[Function]}
+                                                  onTextLayout={[Function]}
+                                                  style={
+                                                    {
+                                                      "color": "#000000",
+                                                      "fontFamily": "System",
+                                                      "fontSize": 28,
+                                                      "fontWeight": undefined,
+                                                      "left": 0,
+                                                      "letterSpacing": 0.15,
+                                                      "lineHeight": undefined,
+                                                      "maxWidth": 73,
+                                                      "opacity": 0,
+                                                      "paddingLeft": 16,
+                                                      "paddingRight": 16,
+                                                      "position": "absolute",
+                                                      "textAlign": "left",
+                                                      "top": 30,
+                                                      "transform": [
+                                                        {
+                                                          "translateX": 0,
+                                                        },
+                                                        {
+                                                          "translateY": 0,
+                                                        },
+                                                        {
+                                                          "scale": 1,
+                                                        },
+                                                      ],
+                                                      "writingDirection": "ltr",
+                                                    }
+                                                  }
+                                                  testID="text-input-flat-label-active"
+                                                >
+                                                  Email
+                                                </Text>
+                                                <Text
+                                                  collapsable={false}
+                                                  maxFontSizeMultiplier={1.5}
+                                                  numberOfLines={1}
+                                                  style={
+                                                    {
+                                                      "color": "rgba(73, 69, 79, 1)",
+                                                      "fontFamily": "System",
+                                                      "fontSize": 28,
+                                                      "fontWeight": undefined,
+                                                      "left": 0,
+                                                      "letterSpacing": 0.15,
+                                                      "lineHeight": undefined,
+                                                      "maxWidth": 73,
+                                                      "opacity": 0,
+                                                      "paddingLeft": 16,
+                                                      "paddingRight": 16,
+                                                      "position": "absolute",
+                                                      "textAlign": "left",
+                                                      "top": 30,
+                                                      "transform": [
+                                                        {
+                                                          "translateX": 0,
+                                                        },
+                                                        {
+                                                          "translateY": 0,
+                                                        },
+                                                        {
+                                                          "scale": 1,
+                                                        },
+                                                      ],
+                                                      "writingDirection": "ltr",
+                                                    }
+                                                  }
+                                                  testID="text-input-flat-label-inactive"
+                                                >
+                                                  Email
+                                                </Text>
+                                              </View>
+                                            </View>
                                           </View>
                                           <TextInput
                                             cursorColor="#000000"
@@ -939,6 +1020,7 @@ exports[`App renders correctly 1`] = `
                                             maxFontSizeMultiplier={1.5}
                                             maxLength={25}
                                             multiline={false}
+                                            numberOfLines={1}
                                             onBlur={[Function]}
                                             onChangeText={[Function]}
                                             onFocus={[Function]}
@@ -949,11 +1031,10 @@ exports[`App renders correctly 1`] = `
                                             style={
                                               [
                                                 {
+                                                  "flexGrow": 1,
                                                   "margin": 0,
                                                 },
-                                                {
-                                                  "height": 56,
-                                                },
+                                                {},
                                                 {
                                                   "paddingBottom": 4,
                                                   "paddingTop": 24,

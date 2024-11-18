@@ -39,20 +39,20 @@ export const Form = forwardRef<FormRef, PropsWithChildren<FormProps>>(
             // Multiple text input fields in a row
             return (
               <View key={index} style={styles.row}>
-                {element?.map?.(inputGroup => {
+                {element?.map?.(inputGroupProps => {
                   const errorMessage =
                     errorFieldMessages[
                       errorFieldMessages.findIndex(
-                        item => item.label === inputGroup?.fieldName,
+                        item => item.label === inputGroupProps?.fieldName,
                       )
                     ]?.errors?.[0];
                   return (
                     <FormTextInput
-                      key={inputGroup?.fieldName}
-                      {...inputGroup}
+                      key={inputGroupProps?.fieldName}
+                      {...inputGroupProps}
                       formErrorMessage={errorMessage}
                       onChangeText={text => {
-                        clearErrorsAndSetValue(inputGroup, text);
+                        clearErrorsAndSetValue(inputGroupProps, text);
                       }}
                     />
                   );

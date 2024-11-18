@@ -22,7 +22,7 @@ interface Meta {
 export interface CommonResponse {
   data: any;
   meta?: {
-    response: Meta;
+    response?: Meta | undefined;
   }; // API call meta data
 }
 

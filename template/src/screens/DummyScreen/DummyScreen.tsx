@@ -11,7 +11,7 @@ import {StackScreens} from '@/navigation/types';
 import {DummyScreenProps} from './DummyScreen.types';
 import {ScrollableScreen} from '@/containers/BaseScreen';
 import {TextBold16, TextRegular14} from '@components/Typography';
-import {Form} from '@/components/Form/Form';
+import {Form} from '@/components';
 import {useDummyScreen} from './DummyScreen.hook';
 import {dummySchema} from './DummyScreen.util';
 import {Colors} from '@/utils/colors';

@@ -5,8 +5,8 @@ import themeSlice from './themeSlice';
 import appSlice from './appSlice';
 import {pokemonApi} from '@services/testApi/pokemonApi';
 import pokemonSlice from './pokemonSlice';
-import {pokemonStorage, mmkvPersistor} from '../../storage/mmkvStorage';
-import {StorageKeys} from '../../storage/storage.utils';
+import {pokemonStorage, mmkvPersistor} from '@/storage/mmkvStorage';
+import {StorageKeys} from '@/storage/storage.utils';
 
 // persist config for theme
 const themeConfig = {

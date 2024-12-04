@@ -2,10 +2,11 @@ import React from 'react';
 import {StyleSheet} from 'react-native';
 
 import {TouchableRipple} from 'react-native-paper';
+
 import {sizer} from '@utils/metrics';
-import {ApiCallScreenProps} from './ApiCallScreen.types';
-import {StackScreens} from '../../navigation/types';
+import {StackScreens} from '@/navigation/types';
 import {TextRegular14} from '@components/Typography';
+import {ApiCallScreenProps} from './ApiCallScreen.types';
 
 interface PokemonItemProps {
   name: string;

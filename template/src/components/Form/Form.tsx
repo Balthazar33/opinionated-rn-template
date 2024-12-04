@@ -1,11 +1,11 @@
 import React, {forwardRef, PropsWithChildren} from 'react';
-
-import {isSingleFormElement} from './Form.utils';
-import {FormProps, FormRef} from './Form.types';
 import {View} from 'react-native';
-import {FormTextInput} from './FormTextInput';
+
 import {useForm} from './Form.hook';
 import {styles} from './Form.styles';
+import {FormTextInput} from './FormTextInput';
+import {FormProps, FormRef} from './Form.types';
+import {isSingleFormElement} from './Form.utils';
 
 export const Form = forwardRef<FormRef, PropsWithChildren<FormProps>>(
   ({formElementProps, schema, formData}: FormProps, ref) => {

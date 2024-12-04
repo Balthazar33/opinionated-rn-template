@@ -1,31 +1,16 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import {StyleSheet} from 'react-native';
 
-import BaseScreen from '../../containers/BaseScreen';
 import {sizer} from '@utils/metrics';
 import {SCREEN_PADDING} from '@utils/constants';
-import {useLazyGetDetailsByNameQuery} from '@services/testApi/pokemonApi';
-import {useAppDispatch, useAppSelector} from '@redux/store.utils';
-import {getDetails} from './PokemonDetailScreen.utils';
-import {clearCurrent} from '@redux/slices/pokemonSlice';
-import {PokemonDetailScreenProps} from './PokemonDetailScreen.types';
+import BaseScreen from '@/containers/BaseScreen';
+import {usePokemonDetailScreen} from './PokemonDetailScreen.hook';
 import {TextRegular10, TextRegular12} from '@components/Typography';
+import {PokemonDetailScreenProps} from './PokemonDetailScreen.types';
 
 export const PokemonDetailScreen = ({route}: PokemonDetailScreenProps) => {
   const {name} = route?.params || {};
-  const [trigger] = useLazyGetDetailsByNameQuery();
-  const {currentPokemon} = useAppSelector(state => state.pokemon) || {};
-  const dispatch = useAppDispatch();
-
-  useEffect(() => {
-    if (name) {
-      getDetails({apiCall: trigger, params: {name}, dispatch});
-    }
-
-    return () => {
-      dispatch(clearCurrent());
-    };
-  }, [trigger, dispatch, name]);
+  const {currentPokemon} = usePokemonDetailScreen(name);
 
   return (
     <BaseScreen style={style.screenStyle}>

@@ -3,18 +3,18 @@ import {StyleSheet, View} from 'react-native';
 
 import {TouchableRipple} from 'react-native-paper';
 
+import {Form} from '@/components';
 import {sizer} from '@utils/metrics';
+import {Colors} from '@/utils/colors';
 import {Strings} from '@utils/strings';
 import {TestIds} from '@utils/test-ids';
+import {dummySchema} from './DummyScreen.util';
 import {SCREEN_PADDING} from '@utils/constants';
 import {StackScreens} from '@/navigation/types';
+import {useDummyScreen} from './DummyScreen.hook';
 import {DummyScreenProps} from './DummyScreen.types';
 import {ScrollableScreen} from '@/containers/BaseScreen';
 import {TextBold16, TextRegular14} from '@components/Typography';
-import {Form} from '@/components';
-import {useDummyScreen} from './DummyScreen.hook';
-import {dummySchema} from './DummyScreen.util';
-import {Colors} from '@/utils/colors';
 
 export const DummyScreen = ({navigation}: DummyScreenProps) => {
   const {formData, propsForFormElements, formRef, showError, throwError} =

@@ -7476,10 +7476,10 @@ rimraf@~2.6.2:
   dependencies:
     glob "^7.1.3"
 
-rnx-gen@^1.0.2:
-  version "1.0.7"
-  resolved "https://registry.npmjs.org/rnx-gen/-/rnx-gen-1.0.7.tgz"
-  integrity sha512-REkV1zAWopVnjtgnWVa7xeie9c+AgMs6oBY8LWXkt1NcRIIDMS4aYO1XQ6/qvPObGPqhAnFWXObdwi/RW+AeqQ==
+rnx-gen@^1.0.12:
+  version "1.0.12"
+  resolved "https://registry.npmjs.org/rnx-gen/-/rnx-gen-1.0.12.tgz"
+  integrity sha512-5yYXrOfJuyS1XkwDx243WnV9llsD1oHNTT6oBgk7MYg6POypBfxH24BT9RZZNvs9bpugXBwyX8Lf1ANPDo1K6A==
   dependencies:
     chalk "^4.1.2"
     commander "^12.1.0"

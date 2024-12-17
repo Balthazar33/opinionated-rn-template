@@ -16,7 +16,7 @@
     "test:containers": "jest --testPathPattern=src/containers/__tests__",
     "adb": "adb devices && adb reverse tcp:8081 tcp:8081",
     "android-tasks": "cd android && gradlew tasks",
-    "load-splash-asset": "npx react-native generate-bootsplash ./assets/logo.png --background=FFFFFF --logo-width=200 --assets-output=./assets",
+    "load-splash-asset": "npx react-native generate-bootsplash ./assets/logo.png --background=FFFFFF --logo-width=192 --assets-output=./assets",
     "android:dev": "cd android && gradlew clean && gradlew installDevelopmentDebug",
     "android:stage": "cd android && gradlew clean && gradlew installStageDebug",
     "android:prod": "cd android && gradlew clean && gradlew installProductionDebug",

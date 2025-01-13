@@ -5,7 +5,7 @@
 
 
 
-## 🏁 Getting started
+## 🧊 Getting started
 Run the following command in a termial to create a new React Native app with this template:
 
 ```bash
@@ -36,10 +36,10 @@ npm run android:stage && npm run start
 ```
 (*The .env files for each environment can be found in the project root*)
 
-## ↔ Multi-environment support
+## 🧊 Multi-environment support
 Four environments, viz. `staging`, `development`, `production`, and `qa`, have been configured with [react-native-config](https://www.npmjs.com/package/react-native-config), each with its own `.env` file.
 
-## 🗄️ Global data management
+## 🧊 Global data management
 This template uses **Redux Toolkit** to handle ephemeral data storage.
 ### Usage
 #### To add an action
@@ -55,28 +55,28 @@ dispatch(<action>)
 const {value} = useAppSelector(state => state.sliceName);
 ```
 
-## 📶 Managing API calls
+## 🧊 Managing API calls
 **RTK Query** has been configured to make API calls. Navigate to `src/services/testApi` and refer the sample api. A helper method to make API calls with error handling has been added in `src/services/apiCaller.ts` file. Learn more about RTK Query [here.](https://redux-toolkit.js.org/rtk-query/overview)
 
 *(To see how RTK Query works with GraphQL, switch to the **feat/graphQL** branch)*
 
-## ➡️ Navigation
+## 🧊 Navigation
 A Stack navigator has been implemented with **@react-navigation/native** and **@react-navigation/stack**, located at `navigation/AppNavigator.tsx` with the types for the same added in `navigation/types.ts`.
 
-## 📱 Splash Screen
+## 🧊 Splash Screen
 `react-native-bootsplash` is used in this template to control the splash screen behavior and appearance. To display a custom icon on the splash screen, replace the `logo.png` image with your custom image in the `assets` folder at the project root and run
 ```bash
 npm run load-splash-asset
 ```
 [Learn more](https://github.com/zoontek/react-native-bootsplash)
 
-## 💾 Persistent storage
+## 🧊 Persistent storage
 This template uses [**MMKVStorage**](https://github.com/ammarahm-ed/react-native-mmkv-storage) as a persistent storage (for redux-persist and as a general local db). 
 
-## 🔤 Typography
+## 🧊 Typography
 Pre-styled text components (created with **styled-components/native**) can be found in the `src/components/Typography.ts` file. (*Make sure to add custom fonts in `src/utils/constants.ts` file*). Learn more about styled components [here.](https://styled-components.com/)
 
-## 🧪 Testing
+## 🧊 Testing
 This template uses **Jest** to run tests.
 Test files (named as `<component-name>.test.ts/tsx`) can be found under the folders named `__tests__`.\
 The setup/config for `Jest` can be found in the `jestSetup.js` and `jest.config.js` files in the project root.
@@ -100,12 +100,12 @@ npm run test:containers
 npm run test:screens
 ```
 
-## 🐛Error boundary
+## 🧊 Error boundary
 This template has an error boundary configured to intercept JavaScript run-time errors and display a fallback UI to minimize app crashes.\
 Package used: [`react-native-error-boundary`](https://www.npmjs.com/package/react-native-error-boundary)\
 Learn more about error boundaries [here](https://react.dev/reference/react/Component#catching-rendering-errors-with-an-error-boundary).
 
-## 🛡️Security
+## 🧊 Security
 - **Third-party keyboard detection (android)**
 If one or more third-party on-screen keyboards are detected, a warning will be displayed to the user on launching the app for the first time, notifying the user about the third-party keyboard(s). This implementation can be found in the `MainActivity.kt` file at `android/app/src/main/java/com/<MY_APP>/MainActivity.kt`.
 - **Encrypted storage**
@@ -114,7 +114,7 @@ Store sensitive data in encrypted storage using **react-native-mmkv-storage**. A
 const encryptedStorage = new MMKVLoader().withEncryption().initialize()
 ```
 
-## 📝Form validation
+## 🧊 Form validation
 Validate form data with [yup](https://www.npmjs.com/package/yup), highlight fields with errors, and display error messages.\
 **Usage**
 ```bash
@@ -156,7 +156,7 @@ const handleValidate = () => {
 
 <Button {...buttonProps} onPress={handleValidate} />
 ```
-## 💻DX
+## 🧊 DX
 - `eslint-plugin-unicorn` 
 Integrated for extending ESLint rules. [Learn more](https://github.com/sindresorhus/eslint-plugin-unicorn)
 - `rnx-gen` 

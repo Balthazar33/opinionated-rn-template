@@ -49,6 +49,20 @@ jest.mock('react-native-keyboard-controller', () =>
   require('react-native-keyboard-controller/jest'),
 );
 
+// reactotron-react-native
+jest.mock('reactotron-react-native', () => {
+  return {
+    createEnhancer: () => jest.fn,
+    configure: jest.fn().mockReturnThis(),
+    setAsyncStorageHandler: jest.fn().mockReturnThis(),
+    useReactNative: jest.fn().mockReturnThis(),
+    use: jest.fn().mockReturnThis(),
+    networking: jest.fn(),
+    connect: jest.fn().mockReturnThis(),
+    onCustomCommand: jest.fn(),
+  };
+});
+
 // @react-navigation/native
 jest.mock('@react-navigation/native/lib/commonjs/useLinking.native', () => ({
   default: () => ({getInitialState: {then: jest.fn()}}),

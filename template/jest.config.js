@@ -54,6 +54,7 @@ module.exports = {
       '|react-native-keyboard-controller' +
       '|react-native-mmkv-storage' +
       '|yup' +
+      '|reactotron-react-native' +
       ')/)',
   ],
 };

@@ -52,7 +52,7 @@ class MainActivity : ReactActivity() {
             alertDialog.show()
         }
     }
-    super.onCreate(savedInstanceState) // super.onCreate(null) with react-native-screens
+    super.onCreate(savedInstanceState)
   }
 
   private fun didFindCustomKeyboard(): Boolean {

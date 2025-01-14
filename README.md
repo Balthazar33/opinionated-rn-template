@@ -164,10 +164,15 @@ Integrated for generating common resources (screens, components, hooks, redux fi
 - `babel-plugin-module-resolver`
 Integrated for supporting absolute paths. [Learn more](https://www.npmjs.com/package/babel-plugin-module-resolver)
 - `@commitlint/config-conventional`
-Integrated for enforcing commit message rules and enhancing dx.
+Integrated for enforcing commit message rules and enhancing dx. [Learn more](https://commitlint.js.org/#/reference-rules)
 Usage:
 ```bash
 git add . // Stage changes
 npm run commit // Run commit script
 ```
- [Learn more](https://commitlint.js.org/#/reference-rules)
+
+## 🧊 Profiling and logging
+This template has **Reactotron** configured for logging/viewing events for `Redux`, network requests, and general console errors/logs in development mode.
+You can also use it to benchmark expensive functions to find and fix bottlenecks in your app.
+- [Download Reactotron client](https://github.com/infinitered/reactotron/releases?q=reactotron-app&expanded=true)
+- [Learn more](https://docs.infinite.red/reactotron/quick-start/react-native/)

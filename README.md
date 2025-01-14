@@ -165,7 +165,8 @@ Integrated for generating common resources (screens, components, hooks, redux fi
 Integrated for supporting absolute paths. [Learn more](https://www.npmjs.com/package/babel-plugin-module-resolver)
 - `@commitlint/config-conventional`
 Integrated for enforcing commit message rules and enhancing dx. [Learn more](https://commitlint.js.org/#/reference-rules)
-Usage:
+
+**Usage**:
 ```bash
 git add . // Stage changes
 npm run commit // Run commit script

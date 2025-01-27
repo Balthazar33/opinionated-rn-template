@@ -7,13 +7,14 @@ import {sizer} from '@utils/metrics';
 import {StackScreens} from '@/navigation/types';
 import {TextRegular14} from '@components/Typography';
 import {ApiCallScreenProps} from './ApiCallScreen.types';
+import {useNavigation} from '@react-navigation/native';
 
 interface PokemonItemProps {
   name: string;
-  navigation: ApiCallScreenProps['navigation'];
 }
 
-export const PokemonItem = ({name, navigation}: PokemonItemProps) => {
+export const PokemonItem = ({name}: PokemonItemProps) => {
+  const {navigation} = useNavigation<ApiCallScreenProps>();
   const handleNamePress = () =>
     navigation.navigate(StackScreens.PokemonDetailScreen, {name});
 

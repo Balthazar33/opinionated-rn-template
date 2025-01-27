@@ -1,6 +1,7 @@
-import {NativeStackScreenProps, RootStackParamList, StackScreens} from '@/navigation/types';
+import {RootStackParamList, StackScreens} from '@/navigation/types';
+import {StackScreenProps} from '@react-navigation/stack';
 
-export type DummyScreenProps = NativeStackScreenProps<
+export type DummyScreenProps = StackScreenProps<
   RootStackParamList,
   StackScreens.DummyScreen
 >;

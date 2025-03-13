@@ -1,4 +1,4 @@
-import React, {PropsWithChildren} from 'react';
+import React, {JSX, PropsWithChildren} from 'react';
 
 import {render} from '@testing-library/react-native';
 import type {RenderOptions} from '@testing-library/react-native';

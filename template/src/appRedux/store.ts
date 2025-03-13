@@ -14,7 +14,12 @@ const configureAppStore = (preloadedState?: any) => {
         .concat(pokemonApi.middleware) // append RTKQuery middleware (for each API)
         .concat(loadingHandler), // custom middleware
     preloadedState,
-    enhancers: __DEV__ ? [reactotron.createEnhancer!()] : [],
+    enhancers: (getDefaultEnhancers) => {
+      if (__DEV__) {
+        return getDefaultEnhancers().concat(reactotron.createEnhancer!());
+      }
+      return getDefaultEnhancers();
+    },
   });
   return store;
 };

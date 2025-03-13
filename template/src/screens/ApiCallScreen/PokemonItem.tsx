@@ -4,17 +4,20 @@ import {StyleSheet} from 'react-native';
 import {TouchableRipple} from 'react-native-paper';
 
 import {sizer} from '@utils/metrics';
-import {StackScreens} from '@/navigation/types';
+import {RootStackParamList, StackScreens} from '@/navigation/types';
 import {TextRegular14} from '@components/Typography';
-import {ApiCallScreenProps} from './ApiCallScreen.types';
-import {useNavigation} from '@react-navigation/native';
+import {StackNavigationProp} from '@react-navigation/stack';
 
 interface PokemonItemProps {
   name: string;
+  navigation: StackNavigationProp<
+    RootStackParamList,
+    StackScreens.ApiCallScreen,
+    undefined
+  >;
 }
 
-export const PokemonItem = ({name}: PokemonItemProps) => {
-  const {navigation} = useNavigation<ApiCallScreenProps>();
+export const PokemonItem = ({name, navigation}: PokemonItemProps) => {
   const handleNamePress = () =>
     navigation.navigate(StackScreens.PokemonDetailScreen, {name});
 

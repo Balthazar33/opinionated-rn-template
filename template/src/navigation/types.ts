@@ -3,6 +3,7 @@ export enum StackScreens {
   DummyScreenWithScroll = 'DummyScreenWithScroll',
   ApiCallScreen = 'ApiCallScreen',
   PokemonDetailScreen = 'PokemonDetailScreen',
+  InfiniteQueryScreen = 'InfiniteQueryScreen'
 }
 
 export type RootStackParamList = {
@@ -15,5 +16,6 @@ export type RootStackParamList = {
   DummyScreenWithScroll: undefined;
   ApiCallScreen: undefined;
   PokemonDetailScreen: {name: string};
+  InfiniteQueryScreen: undefined;
   // add more screens here...
 };

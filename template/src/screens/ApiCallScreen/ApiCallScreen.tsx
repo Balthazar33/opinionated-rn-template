@@ -12,8 +12,8 @@ import {useApiCallScreen} from './ApiCallScreen.hook';
 import {ApiCallScreenProps} from './ApiCallScreen.types';
 import {TextBold12, TextRegular12} from '@components/Typography';
 
-export const ApiCallScreen = ({}: ApiCallScreenProps) => {
-  const {all,handleBtnPress, renderItem} = useApiCallScreen();
+export const ApiCallScreen = ({navigation}: ApiCallScreenProps) => {
+  const {all,handleBtnPress, renderItem} = useApiCallScreen(navigation);
 
   return (
     <BaseScreen testID={TestIds.APICALL_SCREEN} style={style.screenStyle}>

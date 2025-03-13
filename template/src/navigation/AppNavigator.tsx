@@ -6,8 +6,8 @@ import {createStackNavigator} from '@react-navigation/stack';
 import {
   ApiCallScreen,
   DummyScreen,
-  DummyScreenWithScroll,
   PokemonDetailScreen,
+  InfiniteQueryScreen,
 } from '../screens';
 import {RootStackParamList, StackScreens} from './types';
 
@@ -30,11 +30,6 @@ function AppNavigator() {
         />
         <Stack.Screen
           {...commonScreenProps}
-          name={StackScreens.DummyScreenWithScroll}
-          component={DummyScreenWithScroll}
-        />
-        <Stack.Screen
-          {...commonScreenProps}
           name={StackScreens.ApiCallScreen}
           component={ApiCallScreen}
         />
@@ -42,6 +37,11 @@ function AppNavigator() {
           {...commonScreenProps}
           name={StackScreens.PokemonDetailScreen}
           component={PokemonDetailScreen}
+        />
+        <Stack.Screen
+          {...commonScreenProps}
+          name={StackScreens.InfiniteQueryScreen}
+          component={InfiniteQueryScreen}
         />
       </Stack.Navigator>
     </NavigationContainer>

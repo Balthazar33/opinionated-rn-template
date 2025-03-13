@@ -12,6 +12,21 @@ export const pokemonApi = createApi({
   reducerPath: 'pokeApi',
   baseQuery: fetchBaseQuery({baseUrl: BASE_URL}),
   endpoints: builder => ({
+    getInfinitePokemon: builder.infiniteQuery({
+      infiniteQueryOptions: {
+        initialPageParam: null,
+        getNextPageParam: (lastPage, allPages) => {
+          if (!lastPage.next) {return undefined;}
+          const totalFetched = allPages.flatMap((page) => page.results).length;
+          if (totalFetched >= lastPage.count) {return undefined;}
+          return lastPage.next.replace('https://pokeapi.co/api/v2', '');
+        },
+      },
+      query: ({pageParam, queryArg}) => {
+        const {limit} = queryArg;
+        return pageParam ?? `/pokemon?limit=${limit}`;
+      },
+    }),
     // Get all pokemons
     getAllPokemon: builder.query<CommonResponse, GetAllPokemonQueryParams>({
       query: (params) => ({
@@ -48,4 +63,5 @@ export const {
   useLazyGetAllPokemonQuery,
   useLazyGetDetailsByNameQuery,
   useAddPokemonByNameMutation,
+  useGetInfinitePokemonInfiniteQuery,
 } = pokemonApi;

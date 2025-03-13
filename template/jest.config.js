@@ -55,6 +55,8 @@ module.exports = {
       '|react-native-mmkv-storage' +
       '|yup' +
       '|reactotron-react-native' +
+      '|react-redux' +
+      '|@reduxjs/toolkit/query/react' +
       ')/)',
   ],
 };

@@ -1,4 +1,4 @@
-# Opinionated RN template (RN version 0.76.6)
+# Opinionated RN template (RN version 0.78.0)
 
 [![Balthazar33](https://circleci.com/gh/Balthazar33/opinionated-rn-template.svg?style=svg)](https://app.circleci.com/pipelines/github/Balthazar33/opinionated-rn-template)
 
@@ -14,7 +14,7 @@ npx react-native init <YOUR_APP_NAME> --template https://github.com/Balthazar33/
 
 Install dependencies:
 ```bash
-cd <YOUR_APP_NAME> && npm i
+cd <YOUR_APP_NAME> && npm i --legacy-peer-deps
 ```
 > ⚠️ Continue to the next step only after configuring the splash screen *(see **Splash Screen** section below)*.\
 > Then, run the appropriate command from the following commands to build the app. *(Once built, the app needs to be launched manually by tapping on its icon)*.

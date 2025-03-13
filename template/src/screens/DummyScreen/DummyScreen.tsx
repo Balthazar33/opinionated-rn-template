@@ -45,6 +45,16 @@ export const DummyScreen = ({navigation}: DummyScreenProps) => {
       </TouchableRipple>
       <TouchableRipple
         rippleColor={Colors.GREY}
+        onPress={() => {
+          navigation.navigate(StackScreens.InfiniteQueryScreen);
+        }}
+        style={style.buttonStyle}>
+        <TextRegular14 color={Colors.WHITE}>
+          {'To infinite query screen'}
+        </TextRegular14>
+      </TouchableRipple>
+      <TouchableRipple
+        rippleColor={Colors.GREY}
         onPress={throwError}
         style={style.buttonStyle}>
         <TextRegular14 color={Colors.WHITE}>{Strings.throwError}</TextRegular14>

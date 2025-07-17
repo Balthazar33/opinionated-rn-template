@@ -1,19 +1,20 @@
 apply plugin: "com.android.application"
 apply plugin: "org.jetbrains.kotlin.android"
-apply plugin: "com.facebook.react"
 
 project.ext.envConfigFiles = [
-    productiondebug: ".env.prod",
-    productionrelease: ".env.prod",
-    developmentdebug: ".env.dev",
-    developmentrelease: ".env.dev",
-    qadebug: ".env.qa",
+    productiondebug: ".env.production",
+    productionrelease: ".env.production",
+    developmentrelease: ".env.development",
+    developmentdebug: ".env.development",
+    stagingrelease: ".env.staging",
+    stagingdebug: ".env.staging",
     qarelease: ".env.qa",
-    stagedebug: ".env.stage",
-    stagerelease: ".env.stage",
+    qadebug: ".env.qa",
 ]
 
 apply from: project(':react-native-config').projectDir.getPath() + "/dotenv.gradle"
+apply plugin: "com.facebook.react"
+
 // JSON Parser
 import groovy.json.JsonSlurper
 
@@ -129,26 +130,28 @@ android {
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
         }
     }
+
+    flavorDimensions "default"
     productFlavors {
+        production {
+            applicationId defaultConfig.applicationId
+            resValue "string", "build_config_package", "${defaultConfig.applicationId}"
+            resValue "string", "app_name", appName
+        }
         development {
-            applicationId 'com.rntemplate.development'
-            resValue "string", "build_config_package", "com.rntemplate"
-            resValue "string", "app_name","DEV ${appName}"
+            applicationIdSuffix ".development"
+            resValue "string", "build_config_package", "${defaultConfig.applicationId}"
+            resValue "string", "app_name", "DEV ${appName}"
+        }
+        staging {
+            applicationIdSuffix ".staging"
+            resValue "string", "build_config_package", "${defaultConfig.applicationId}"
+            resValue "string", "app_name", "STAGE ${appName}"
         }
         qa {
-            applicationId 'com.rntemplate.qa'
-            resValue "string", "build_config_package", "com.rntemplate"
-            resValue "string", "app_name","QA ${appName}"
-        }
-        stage {
-            applicationId 'com.rntemplate.stage'
-            resValue "string", "build_config_package", "com.rntemplate"
-            resValue "string", "app_name","STAGE ${appName}"
-        }
-        production {
-            applicationId 'com.rntemplate.production'
-            resValue "string", "build_config_package", "com.rntemplate"
-            resValue "string", "app_name", appName
+            applicationIdSuffix ".qa"
+            resValue "string", "build_config_package", "${defaultConfig.applicationId}"
+            resValue "string", "app_name", "QA ${appName}"
         }
     }
 }

@@ -17,10 +17,10 @@
     "adb": "adb devices && adb reverse tcp:8081 tcp:8081",
     "android-tasks": "cd android && gradlew tasks",
     "load-splash-asset": "npx react-native generate-bootsplash ./assets/logo.png --background=FFFFFF --logo-width=192",
-    "android:dev": "cd android && gradlew clean && gradlew installDevelopmentDebug",
-    "android:stage": "cd android && gradlew clean && gradlew installStageDebug",
-    "android:prod": "cd android && gradlew clean && gradlew installProductionDebug",
-    "android:qa": "cd android && gradlew clean && gradlew installQaDebug"
+    "android:prod": "cd android && gradlew clean && cd .. && npx react-native run-android --mode productionDebug",
+    "android:dev": "cd android && gradlew clean && cd .. && npx react-native run-android --mode developmentDebug --appIdSuffix development",
+    "android:stage": "cd android && gradlew clean && cd .. && npx react-native run-android --mode stagingDebug --appIdSuffix staging",
+    "android:qa": "cd android && gradlew clean && cd .. && npx react-native run-android --mode qaDebug --appIdSuffix qa"
   },
   "dependencies": {
     "@react-native-community/netinfo": "^11.4.1",

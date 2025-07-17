@@ -17,7 +17,7 @@ Install dependencies:
 cd <YOUR_APP_NAME> && npm i --legacy-peer-deps
 ```
 > ⚠️ Continue to the next step only after configuring the splash screen *(see **Splash Screen** section below)*.\
-> Then, run the appropriate command from the following commands to build the app. *(Once built, the app needs to be launched manually by tapping on its icon)*.
+> Then, run the appropriate command from the following commands to build the app.
 > Also, to enable the new architecture for android, set `newArchEnabled` to `true` in `android/gradle.properties`
 
 **Android**:

@@ -3,6 +3,7 @@ import {PixelRatio, Dimensions} from 'react-native';
 const {width: screenWidth, height: screenHeight} = Dimensions.get('screen');
 
 const SIZE_CACHE = new Map<number, number>();
+const BASE_SCREEN_WIDTH = 375;
 /**
  * Returns device-adjusted size for the given input
  * @param {number} input - input size
@@ -14,7 +15,7 @@ const SIZE_CACHE = new Map<number, number>();
 export const sizer = (input: number): number => {
   // Cache frequently used sizes to avoid recomputation on every call.
   if (!SIZE_CACHE.has(input)) {
-    SIZE_CACHE.set(input, PixelRatio.roundToNearestPixel((input * screenWidth) / 375));
+    SIZE_CACHE.set(input, PixelRatio.roundToNearestPixel((input * screenWidth) / BASE_SCREEN_WIDTH));
   }
   return SIZE_CACHE.get(input) ?? 1;
 };

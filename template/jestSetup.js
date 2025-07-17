@@ -69,11 +69,6 @@ jest.mock('@react-navigation/native/lib/commonjs/useLinking.native', () => ({
   __esModule: true,
 }));
 
-// back handler
-jest.mock('react-native/Libraries/Utilities/BackHandler', () =>
-  require('react-native/Libraries/Utilities/__mocks__/BackHandler'),
-);
-
 // react-native-mmkv-storage
 jest.mock('react-native-mmkv-storage', () => ({
   MMKVLoader: jest.fn().mockImplementation(() => {

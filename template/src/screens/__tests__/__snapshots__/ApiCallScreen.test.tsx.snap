@@ -26,11 +26,15 @@ exports[`ApiCallScreen renders correctly 1`] = `
   >
     <Text
       style={
-        {
-          "color": "#000000",
-          "fontFamily": "roboto",
-          "fontSize": 24,
-        }
+        [
+          {
+            "color": "#000000",
+            "fontFamily": "roboto",
+            "fontSize": 24,
+            "includeFontPadding": false,
+          },
+          undefined,
+        ]
       }
     >
       Api Call Screen
@@ -77,11 +81,15 @@ exports[`ApiCallScreen renders correctly 1`] = `
     >
       <Text
         style={
-          {
-            "color": "#000000",
-            "fontFamily": "roboto",
-            "fontSize": 24,
-          }
+          [
+            {
+              "color": "#000000",
+              "fontFamily": "roboto",
+              "fontSize": 20,
+              "includeFontPadding": false,
+            },
+            undefined,
+          ]
         }
       >
         Get All Pokemon

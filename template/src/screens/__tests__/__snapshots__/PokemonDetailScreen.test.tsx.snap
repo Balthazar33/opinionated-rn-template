@@ -25,11 +25,15 @@ exports[`PokemonDetailScreen renders correctly 1`] = `
   >
     <Text
       style={
-        {
-          "color": "#000000",
-          "fontFamily": "roboto",
-          "fontSize": 20,
-        }
+        [
+          {
+            "color": "#000000",
+            "fontFamily": "roboto",
+            "fontSize": 20,
+            "includeFontPadding": false,
+          },
+          undefined,
+        ]
       }
     >
       Fetching details for: 
@@ -37,22 +41,30 @@ exports[`PokemonDetailScreen renders correctly 1`] = `
     </Text>
     <Text
       style={
-        {
-          "color": "#000000",
-          "fontFamily": "roboto",
-          "fontSize": 24,
-        }
+        [
+          {
+            "color": "#000000",
+            "fontFamily": "roboto",
+            "fontSize": 24,
+            "includeFontPadding": false,
+          },
+          undefined,
+        ]
       }
     >
       Name: 
     </Text>
     <Text
       style={
-        {
-          "color": "#000000",
-          "fontFamily": "roboto",
-          "fontSize": 24,
-        }
+        [
+          {
+            "color": "#000000",
+            "fontFamily": "roboto",
+            "fontSize": 24,
+            "includeFontPadding": false,
+          },
+          undefined,
+        ]
       }
     >
       Weight: 
